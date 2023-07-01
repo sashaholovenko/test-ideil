@@ -1,0 +1,85 @@
+.header {
+    width: 100%;
+    height: 60px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(64px);
+    display: flex;
+}
+
+
+
+.nav__panel {
+    display: flex;
+    width: 80%;
+    height: 60px;
+    justify-content: space-around;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-left: 34.5px;
+    align-items: center;
+}
+
+
+.frame__logo {
+    width: 192px;
+    height: 34px;
+    flex-shrink: 0;
+    margin-top: 9px;
+}
+
+.union__logo {
+    width: 30px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 18px 29px 18px 20px;
+}
+
+.search__logo {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 23px 10px 19px 82px;
+}
+
+.language__selection {
+    display: flex;
+    width: 43px;
+    height: 60px;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-right: 10px;
+    align-items: center;
+}
+.header__url {
+    color: rgba(140,140,140,0.71);
+    position: relative;
+    font-size: 18px;
+    line-height: 160%;
+    font-family: Formular;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 678px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.header__vector {
+    color: rgba(140,140,140,0.71);
+    color: grey;
+}

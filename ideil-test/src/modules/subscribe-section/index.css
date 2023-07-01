@@ -1,0 +1,50 @@
+.subscribe {
+    padding-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.subscribe__text {
+    font-size: 42px;
+    display: flex;
+    font-family: Formular;
+    color: #fff;
+    text-align: left;
+    align-items: center;
+    width: 25%;
+    height: 84px;
+
+}
+.subscribe__button {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    width: 25%;
+    height: 88px;
+    font-size: 30px;
+    display: flex;
+    font-family: Formular;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+.subscribe__input {
+    width: 45%;
+}
+
+.subscribe__input__elem {
+    height: 84px;
+    width: 100%;
+    font-size: 42px;
+    color: rgba(230,230,230,0.71);
+}

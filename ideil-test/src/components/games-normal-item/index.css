@@ -1,0 +1,124 @@
+.games__normal__item {
+    flex-basis: 24%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 220px;
+    display: flex;
+
+
+}
+
+.games__normal__item:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.game__format {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: black;
+    font-size: 16px;
+    font-family: Formular;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.game__status {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: black;
+    font-size: 16px;
+    font-family: Formular;
+    font-weight: 700;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.game__status__logo {
+    width: 10px;
+    height: 10px;
+    background: #38C550;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.game__score {
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 16px;
+    font-family: Formular;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.game__teams {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 55px;
+    left: 12%;
+}
+
+.team__info {
+    color: black;
+    font-size: 16px;
+    font-family: Formular;
+    font-weight: 700;
+    line-height: 32px;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.game__status__text {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.red__text {
+    height: 30px;
+    background: #FE0000;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: Formular;
+    font-weight: 700;
+    word-wrap: break-word;
+    color: white;
+    font-size: 24px;
+    font-family: Formular;
+    font-weight: 700;
+    word-wrap: break-word;
+    padding: 4px 4px 4px 4px;
+}
+
+.tournament__info {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 20px;
+    gap: 10px;
+    bottom: 20px;
+    color: black;
+    font-size: 16px;
+    font-family: Formular;
+    font-weight: 400;
+    word-wrap: break-word;
+}

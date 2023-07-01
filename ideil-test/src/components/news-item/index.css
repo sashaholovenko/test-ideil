@@ -1,0 +1,45 @@
+.news__item {
+    width: 24%;
+    height: 360px;
+    background-color: white;
+}
+
+.news__text {
+    position: relative;
+    background-color: #000;
+    width: 35%;
+    height: 20px;
+    top: 21px;
+    left: 20px;
+    border-radius: 20px;
+
+}
+
+.news__text p {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    font-family: Formular;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 20px;
+    font-weight: 700;
+}
+
+.news__content {
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+    font-family: Formular;
+    color: #000;
+    text-align: left;
+    width: 267px;
+    margin-top: 62px;
+    margin-left: 20px;
+}
+
+.news__content b {}

@@ -1,4 +1,4 @@
-import "../../core/main/index.css"
+import "../../core/main-page/index.css"
 import {useState} from "react";
 
 

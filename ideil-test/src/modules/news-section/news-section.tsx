@@ -17,8 +17,8 @@ const NewsSection = () => {
                 </div>
             </div>
             <div className="news__section">
-                {news.map(_el => (
-                    <NewsItem/>
+                {news.map((_el, index) => (
+                    <NewsItem key={index}/>
                 ))}
             </div>
             <div className="open__more">

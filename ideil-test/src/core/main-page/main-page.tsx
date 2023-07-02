@@ -5,11 +5,13 @@ import MatchesBlock from "../../modules/matches-block/matches-block.tsx";
 import PageSectionHeader from "../../components/UI/page-section-header/page-section-header.tsx";
 
 
-const Main = () => {
+const MainPage = () => {
+
+
 
     return (
         <main style={{width: "100%"}}>
-            <PageSectionHeader value="Матчи CS:GO"/>
+            <PageSectionHeader value="Матчи CS:GO" fontSize={40}/>
             <MainFilters />
             <TournamentsFilters />
             <MatchesBlock />
@@ -17,4 +19,5 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default MainPage;
+//@ts-ignore

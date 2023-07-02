@@ -4,8 +4,7 @@
     flex-direction: column;
     flex-shrink: 0;
     color: #000;
-    font-size: 40px;
-    font-family: Formular;
+    font-family: Formular, serif;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -93,7 +92,7 @@
 
 }
 
-.test {
+.timezones__filters {
     display: flex;
     align-items: center;
     justify-content: space-between;

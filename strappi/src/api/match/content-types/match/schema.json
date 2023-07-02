@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "singularName": "match",
+    "pluralName": "matches",
+    "displayName": "matches",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "matchDate": {
+      "type": "datetime"
+    },
+    "teamOneId": {
+      "type": "uid"
+    },
+    "teamTwoId": {
+      "type": "uid"
+    },
+    "winner": {
+      "type": "string"
+    },
+    "score": {
+      "type": "string"
+    },
+    "teams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::team.team",
+      "inversedBy": "matches"
+    },
+    "stageOfMatch": {
+      "type": "string"
+    },
+    "formatOfMatch": {
+      "type": "string"
+    }
+  }
+}

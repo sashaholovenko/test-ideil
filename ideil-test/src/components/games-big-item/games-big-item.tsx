@@ -2,24 +2,28 @@ import "./index.css"
 import React from "react";
 // import NaviLogo from "../../assets/navi-logo.svg"
 import NaviLogo1 from "../../assets/navinah.png"
-// import EgLogo from "../../assets/eg-logo.svg"
+// import EgLogo from "../../assets/EG.svg"
 import MaltaTour from "../../assets/malta-tournament.png"
 import OGlogo from "../../assets/og-logo.svg"
+import {GamesItemProps} from "../../modules/types.ts"
+import {useNavigate} from "react-router-dom";
 
 
-interface GamesBigItemProps {
-    elem: number
-}
 
-const GamesBigItem: React.FC<GamesBigItemProps> = ({elem}) => {
+const GamesBigItem: React.FC<GamesItemProps> = ({elem}) => {
+
+    let navigate = useNavigate();
+
+
     return (
-        <div className="games__large__item">
-            <div className="game__format"><p>bo{elem}</p></div>
+
+        <div className="games__large__item" onClick={() => navigate(`/${elem.id}`)}>
+            <div className="game__format"><p>bo5</p></div>
             <div className="game__status">
                 <div className="game__status__logo">+</div>
                 <p>идет вторая карта</p>
             </div>
-            <div className="game__score"><p>1 - 0</p></div>
+            <div className="game__score"><p>{elem.attributes.score}</p></div>
             <div className="game__teams">
                 <div className="team__info">
                     <div style={{
@@ -36,7 +40,7 @@ const GamesBigItem: React.FC<GamesBigItemProps> = ({elem}) => {
                     }}>
                         <img src={OGlogo} alt=""/>
                     </div>
-                    <p>OG</p>
+                    <p>{elem.attributes.teams.data["0"].attributes.name}</p>
                 </div>
                 <div className="team__info">
                     <div style={{
@@ -53,7 +57,7 @@ const GamesBigItem: React.FC<GamesBigItemProps> = ({elem}) => {
                     }}>
                         <img src={NaviLogo1} alt=""/>
                     </div>
-                    <p>NaVi</p>
+                    <p>{elem.attributes.teams.data["1"].attributes.name}</p>
                 </div>
             </div>
 

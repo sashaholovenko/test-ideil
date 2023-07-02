@@ -6,7 +6,7 @@ import valorantSVG from "../../assets/valorant-logo.svg";
 import dotaSVG from "../../assets/dota2-logo.svg";
 import filterDrop from "../../assets/filter-drop.svg";
 import filterUp from "../../assets/filter-up.svg";
-import "../../core/main/index.css"
+import "../../core/main-page/index.css"
 
 const MainFilters = () => {
     return (
@@ -37,7 +37,7 @@ const MainFilters = () => {
                     <b className="game__filter__text">Dota2</b>
                 </div>
             </div>
-            <div className="test">
+            <div className="timezones__filters">
                 <div className="matches__timezone">
                     <span>Текущие</span><span>Завершенные</span><span className="timezone">Предстоящие</span>
                 </div>

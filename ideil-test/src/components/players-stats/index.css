@@ -1,0 +1,63 @@
+.player__stats__section {
+    margin-top: 30px;
+}
+
+.player__stats__section h1 {
+    font-size: 30px;
+    font-family: Formular;
+    font-weight: 1000;
+    line-height: 42px;
+    word-wrap: break-word;
+}
+
+.player__stats__header {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stats__header__team{
+    color: #000;
+    font-size: 24px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    gap: 10px;
+    width: 30%;
+}
+
+.stats__header__team b{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.stats__header__names {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    color: #000;
+    font-size: 16px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+}
+
+.stats__header__team__wrapper {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(228,228,228,0.71);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shn {
+    width: 12.5%;
+    text-align: center;
+}

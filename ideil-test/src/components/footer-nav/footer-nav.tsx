@@ -10,15 +10,15 @@ const FooterNav = () => {
         <div className="footer__nav">
             <div className="footer__links">
                 <div className="footer__main__links">
-                    {mainLinks.map(link => (
-                        <div className="main__link">
+                    {mainLinks.map((link, index) => (
+                        <div className="main__link" key={index}>
                             <p>{link}</p>
                         </div>
                     ))}
                 </div>
                 <div className="footer__side__links">
-                    {sideLinks.map(link => (
-                        <div className="side__link">
+                    {sideLinks.map((link, index) => (
+                        <div className="side__link" key={index}>
                             <p>{link}</p>
                         </div>
                     ))}

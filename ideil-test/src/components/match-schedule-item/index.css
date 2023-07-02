@@ -17,9 +17,10 @@
 .match__schedule__stage {
     color: black;
     font-size: 16px;
-    font-family: 'Formular';
+    font-family: 'Formular', serif;
     font-weight: 400;
-    word-wrap: break-word
+    word-wrap: break-word;
+    width: 10%;
 }
 
 .match__schedule__tournament {
@@ -69,8 +70,9 @@
 .match__schedule__preview {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 10px;
+    width: 400px;
+    justify-content: center;
 }
 
 .team__name {
@@ -87,6 +89,7 @@
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
+    width: 20%;
 }
 
 .time__zone {
@@ -100,11 +103,28 @@
 .time__match__start {
     color: black;
     font-size: 22px;
-    font-family: Formular;
+    font-family: Formular, serif;
     font-weight: 800;
     word-wrap: break-word
 }
 
 .tournament__name {
     hyphens: auto;
+}
+
+.first__block {
+    display: flex;
+align-items: center;
+    width: 30%;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.second__block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    gap: 20px;
+;
 }

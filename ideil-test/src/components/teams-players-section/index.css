@@ -1,0 +1,26 @@
+.teams__players__section {
+    margin-top: 40px;
+}
+
+.teams__players__section h1 {
+    font-size: 30px;
+    font-family: Formular;
+    font-weight: 1000;
+    line-height: 42px;
+    word-wrap: break-word
+}
+
+.team__section__icon__wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgba(232,232,232,0.71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teams__squads {
+    display: flex;
+}

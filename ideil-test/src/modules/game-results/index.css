@@ -1,0 +1,59 @@
+.game__results__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game__results__header h2 {
+    color: #000;
+    font-size: 24px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.game__results__score {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.game__results__score__elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    background-color: black;
+    height: 40px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.game__results__team__logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(221,221,221,0.71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__results__maps__tab {
+    color: rgba(128,128,128,0.71);
+    text-align: right;
+    font-size: 18px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -92,6 +92,8 @@
 
 }
 
+.red {background-color: red}
+
 .red__text {
     height: 30px;
     background: #FE0000;
@@ -121,4 +123,28 @@
     font-family: Formular;
     font-weight: 400;
     word-wrap: break-word;
+}
+
+.game__date {
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    font-family: Formular;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.game__date h3 {
+    color: #000;
+    text-align: center;
+    font-size: 25px;
+    font-family: Formular;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
 }

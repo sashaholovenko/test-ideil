@@ -2,6 +2,7 @@ import MatchScheduleBlock from "../../components/match-schedule-block/match-sche
 import "./index.css"
 import {GamesItemProps} from "../types.ts";
 import {FC} from "react";
+import ShowMoreButton from "../../UI/show-more-button/show-more-button.tsx";
 
 interface MatchScheduleProps {
     matches: GamesItemProps[]
@@ -13,9 +14,7 @@ const MatchSchedule: FC<MatchScheduleProps>= ({matches}) => {
         <div className="match__schedule">
             <MatchScheduleBlock matches={matches.slice(0, 3)} date="Пятница 30 июля 2021"/>
             <MatchScheduleBlock matches={matches.slice(3)} date="Среда 22 0июля 2021"/>
-            <div className="show__more">
-                <b className="show__more__button">ПОКАЗАТЬ ЕЩЕ</b>
-            </div>
+            <ShowMoreButton/>
         </div>
     );
 };

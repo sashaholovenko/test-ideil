@@ -6,33 +6,3 @@
     flex-direction: column;
 }
 
-.show__more {
-    position: relative;
-    border-radius: 42px;
-    border: 1px solid #000;
-    box-sizing: border-box;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    margin: 20px auto;
-    align-items: center;
-}
-
-.show__more:hover {
-    cursor: pointer;
-}
-
-.show__more__button {
-    position: relative;
-    font-size: 16px;
-    display: flex;
-    font-family: Formular;
-    color: #000;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 40px;
-
-}

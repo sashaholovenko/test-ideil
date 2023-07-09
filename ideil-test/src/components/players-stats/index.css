@@ -61,3 +61,57 @@
     width: 12.5%;
     text-align: center;
 }
+
+.roasters {
+    width: 100%;
+}
+
+.roasters table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.roasters tbody td {
+    border-top: 1px solid rgba(229,229,229,0.71);
+}
+.roasters tbody {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.roasters th {
+    width: 8%;
+    text-align: center;
+    margin-top: 20px;
+}
+.roasters td {
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.roasters-team {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.rosters-team__name {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.roasters td:first-child {
+    font-weight: 800;
+    font-size: 18px;
+    text-align: start;
+}
+
+.roasters-team p {
+    font-size: 24px;
+}
+
+.roasters-team p {
+    font-size: 24px;
+}

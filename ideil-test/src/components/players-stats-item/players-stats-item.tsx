@@ -1,6 +1,8 @@
 import "./index.css"
 
 const PlayersStatsItem = () => {
+
+
     return (
         <div className="player__stats__item">
             <div className="player__stats__item__name">

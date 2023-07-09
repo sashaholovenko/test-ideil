@@ -6,14 +6,10 @@
 
 }
 
-.under__header__info p {
-    color: #000;
+.under__header__info p, time{
     font-size: 18px;
-    font-family: Formular;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
+
 
 .under__header__social {
     display: flex;

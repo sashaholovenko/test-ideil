@@ -1,0 +1,29 @@
+.last__games {
+    display: flex;
+    gap: 20px;
+}
+
+.last__games p {
+    font-size: 19px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+
+
+
+.last__games h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+
+.last__games-first {
+    width: 50%;
+}
+
+.last__games-second {
+    width: 50%;
+}
+
+last__games-win-logo

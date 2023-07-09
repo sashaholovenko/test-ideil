@@ -1,10 +1,6 @@
 import "./index.css"
 import React from "react";
-// import NaviLogo from "../../assets/navi-logo.svg"
-import NaviLogo1 from "../../assets/navinah.png"
-// import EgLogo from "../../assets/EG.svg"
 import MaltaTour from "../../assets/malta-tournament.png"
-import OGlogo from "../../assets/og-logo.svg"
 import {GamesItemProps} from "../../modules/types.ts"
 import {useNavigate} from "react-router-dom";
 
@@ -38,7 +34,7 @@ const GamesBigItem: React.FC<GamesItemProps> = ({elem}) => {
                         display: "flex",
                         alignItems: "center"
                     }}>
-                        <img src={OGlogo} alt=""/>
+                        <img src={"/src/assets/" + elem.attributes.teams.data["0"].attributes.shortName + ".svg"} style={{width: 57, height: 40}} alt=""/>
                     </div>
                     <p>{elem.attributes.teams.data["0"].attributes.name}</p>
                 </div>
@@ -55,7 +51,7 @@ const GamesBigItem: React.FC<GamesItemProps> = ({elem}) => {
                         display: "flex",
                         alignItems: "center"
                     }}>
-                        <img src={NaviLogo1} alt=""/>
+                        <img src={"/src/assets/" + elem.attributes.teams.data["1"].attributes.shortName + ".svg"} alt="" style={{width: 57, height: 40}}/>
                     </div>
                     <p>{elem.attributes.teams.data["1"].attributes.name}</p>
                 </div>

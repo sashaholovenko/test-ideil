@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .game__results__header h2 {
     color: #000;
     font-size: 24px;
-    font-family: Formular;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -29,7 +29,6 @@
     color: #FFF;
     text-align: center;
     font-size: 18px;
-    font-family: Formular;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -49,11 +48,36 @@
     color: rgba(128,128,128,0.71);
     text-align: right;
     font-size: 18px;
-    font-family: Formular;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.game-results__rounds {
+    width: 100%;
+}
+
+.game-results__rounds table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.game-results__rounds td {
+    text-align: center;
+
+}
+
+.game-results__rounds p {
+    font-size: 16px;
+
+}
+
+.game-results__rounds td {
+    vertical-align: center;
+}
+
+.game-results__rounds tr:first-child td {
 }

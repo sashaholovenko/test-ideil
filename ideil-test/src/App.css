@@ -6,9 +6,3 @@
 
 
 
-@font-face {
-  font-family: 'Formular';
-  src: local('Formular'), url(./fonts/formular-regular-trial.otf) format('otf');
-  /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
-}

@@ -1,38 +1,62 @@
 import "./index.css"
 import naviLogo from "../../assets/navi-logo.svg"
-import PlayersStatsItem from "../players-stats-item/players-stats-item.tsx";
 import {FC, JSX} from "react";
 
 interface PlayersStatsProps {
     children: JSX.Element
+    img: boolean
 }
 
-const PlayersStats: FC<PlayersStatsProps> = ({children}) => {
+const PlayersStats: FC<PlayersStatsProps> = ({children, img}) => {
+    // TODO: make props with arrays of th and td tags
+
     return (
-        <div className="player__stats__section">
-            <div className="player__stats__header">
-                <div className="stats__header__team">
-                    <div className="stats__header__team__wrapper">
-                        <img src={naviLogo} alt="" style={{width: 30, height: 21}}/>
-                    </div>
-                    {children}
-                </div>
-                <div className="stats__header__names">
-                    <div className="shn"><p>Maps</p></div>
-                    <div className="shn"><p>K(HS)</p></div>
-                    <div className="shn"><p>A(F)</p></div>
-                    <div className="shn"><p>D</p></div>
-                    <div className="shn"><p>KD Diff</p></div>
-                    <div className="shn"><p>KAST</p></div>
-                    <div className="shn"><p>ADR</p></div>
-                    <div className="shn"><p>FK Diff</p></div>
-                </div>
-            </div>
-            {[1,1,1, 1, 1].map( _elem => (
-                <PlayersStatsItem />
-            ))}
+        <div className="roasters">
+            <table >
+                <thead>
+                <tr>
+                    {img ?
+                        <th style={{width: "30%"}}><div className="roasters-team">
+                            <img src={naviLogo} alt=""/>
+                            {children}
+                        </div></th>
+                        :
+                        <th style={{width: "30%", textAlign: "start", fontSize: 18}}>
+                            {children}
+                        </th>
+                    }
+
+                    <th>Maps</th>
+                    <th>K(HS)</th>
+                    <th>A(F)</th>
+                    <th>D</th>
+                    <th>KD Diff</th>
+                    <th>KAST</th>
+                    <th>ADR</th>
+                    <th>FK Diff</th>
+                </tr>
+                </thead>
+                <tbody>
+                {[1,2,3,4,5].map( _elem => (
+                    <tr>
+                        <td>s1mple</td>
+                        <td>3</td>
+                        <td>63 (20)</td>
+                        <td>22 (6)</td>
+                        <td>46</td>
+                        <td>+17</td>
+                        <td>73.4%</td>
+                        <td>79.7</td>
+                        <td>+7</td>
+                    </tr>
+                ))}
+
+                </tbody>
+            </table>
 
         </div>
+
+
     );
 };
 

@@ -4,7 +4,6 @@
     flex-direction: column;
     flex-shrink: 0;
     color: #000;
-    font-family: Formular, serif;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -42,7 +41,6 @@
 }
 .game__filter__text {
     font-size: 18px;
-    font-family: Formular;
     color: #000;
     text-align: center;
     margin: 10px 18px 8px 10px;
@@ -50,7 +48,6 @@
 
 .matches__timezone {
     font-size: 18px;
-    font-family: 'Formular';
     font-weight: 400;
     word-wrap: break-word;
     margin-top: 40px;
@@ -62,7 +59,6 @@
 .timezones {
     color: black;
     font-size: 18px;
-    font-family: 'Formular';
     font-weight: 400;
     word-wrap: break-word;
 }
@@ -113,7 +109,6 @@
     display: flex;
     color: black;
     font-size: 18px;
-    font-family: 'Formular';
     font-weight: 700;
     word-wrap: break-word;
     align-items: center;
@@ -136,8 +131,7 @@
 .tournament__item {
     background: #F5F5F5;
     color: black;
-    font-family: 'Formular';
-    fon-weight: 400;
+    font-weight: 400;
     word-wrap: break-word;
     border-radius: 42px;
     display: flex;
@@ -158,10 +152,6 @@
     color: white;
 }
 
-games {
-    overflow: hidden;
-
-}
 
 .games__large {
     margin-left: 25px;

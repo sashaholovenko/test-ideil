@@ -7,34 +7,76 @@ interface TeamItemProps {
     team: string[]
 }
 
+// TODO: add images and dynamic values and fix classname
+// @ts-ignore
 const TeamItem: FC<TeamItemProps> = ({img, team}) => {
 
 
     return (
-        <div className="team__section__player">
-            <div className="team__section__header">
-                <div className="team__section__icon__wrapper">
-                    <img src={img} alt="" style={{height: 21, width: 30}}/>
-                </div>
-                <div>
-                <p>{team[0]}</p>
-                </div>
-            </div>
-            <div style={{width: '100%', height: '2px', background: "#E8E8E8", marginTop: 10}}></div>
-            <div>
-                {[1,2,3,4,5].map( _elem => (
-                    <div className="player__item">
-                        <div className="player__item__photo">
-                            <img src={simplePic} alt=""/>
+        <div  className="team__item">
+            <table>
+                <thead>
+                <tr>
+                    <td>
+                        <div>
+                            <div style={{display: "flex", alignItems: "center"}}>
+                                <img src={"src/assets/" + "EG" + ".svg"} alt="first team logo"/>
+                                <b style={{fontSize: 22}}>
+                                    {team[0]}
+
+                                </b>
+                            </div>
                         </div>
-                        <div className="player__item__name">
-                           <b><p>NiKo</p></b>
-                            <p>Nikola Kovac</p>
+                    </td>
+                    <td>
+                        <div>
+                            <div style={{display: "flex", alignItems: "center"}}>
+                                <img src={"src/assets/" + "EG" + ".svg"} alt="first team logo"/>
+                                <b style={{fontSize: 22}}>
+                                    {team[0]}
+
+                                </b>
+                            </div>
                         </div>
-                    </div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                {[1, 2, 3, 4, 5].map(_elem => (
+                    <tr>
+                        <td>
+                            <div style={{display:"flex"}}>
+                                <div style={{display: "flex", alignItems: "end"}}>
+                                    <img src={simplePic} alt=""/>
+                                </div>
+                                <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                                    <b>s1mple</b>
+                                    <p>Александр Костылев</p>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div style={{display:"flex"}}>
+                                <div style={{display: "flex", alignItems: "end"}}>
+                                    <img src={simplePic} alt=""/>
+                                </div>
+                                <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                                    <b>s1mple</b>
+                                    <p>Александр Костылев</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                 ))}
-            </div>
+
+
+                </tbody>
+            </table>
         </div>
+
+
+
     );
 };
 

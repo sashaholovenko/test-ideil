@@ -1,0 +1,29 @@
+.upcoming__games {
+    display: flex;
+    gap: 20px;
+}
+
+.upcoming__games p {
+    font-size: 19px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+
+
+
+.upcoming__games h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+
+.upcoming__games-first {
+    width: 50%;
+}
+
+.upcoming__games-second {
+    width: 50%;
+}
+
+upcoming__games-win-logo

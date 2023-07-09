@@ -39,3 +39,63 @@
     display: flex;
     align-items: end;
 }
+
+.column__item__photo {
+
+}
+
+/*table {*/
+/*    border-spacing: 0;*/
+/*}*/
+
+
+
+/*th {*/
+/*    border: solid black;*/
+/*    border-width: 0px 0px 1px 0px;*/
+
+/*}*/
+
+/*.try {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    border: solid rgba(128,128,128,0.71);*/
+/*    border-width: 0 0 1px 0;*/
+/*    margin-right: 20px;*/
+
+/*}*/
+/* td {*/
+/*    !*border: solid black;*!*/
+/*    !* border-width: 0 0 1px 0;*!*/
+/*}*/
+
+/* .c-table__row {*/
+/*     border-bottom: 1px solid rgba(0,0,0,.1);*/
+/* }*/
+.team__item {
+    width: 100%;
+}
+.team__item table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.team__item thead tr {
+    border-bottom: 2px solid rgba(153,153,153,0.71);
+}
+.team__item tbody td {
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(229,229,229,0.71);
+}
+.team__item tbody {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+/*table tr*/
+/*{*/
+/*    border-bottom:1px solid rgba(128,128,128,0.71);*/
+/*}*/
+
+
+

@@ -6,6 +6,7 @@ import GameSection from "../../modules/game-section/game-section.tsx";
 import {useEffect, useState} from "react";
 import SubscribeSection from "../../modules/subscribe-section/subscribe-section.tsx";
 import GamesPredictions from "../../modules/games-predictions/games-predictions.tsx";
+import {Match} from "../../modules/types.ts";
 // import {teams} from "../../modules/types.ts";
 
 // interface gameProps {
@@ -23,10 +24,10 @@ import GamesPredictions from "../../modules/games-predictions/games-predictions.
 // }
 
 const GamePage = () => {
-
     const filters = ["Общая информация", "Стрим", "Команды и составы", "Результаты матча", "Предстоящие матчи", "Частые вопросы"]
 
-    const [game, setGame] = useState<object>({})
+    // @ts-ignore
+    const [game, setGame] = useState<Match>({})
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -35,7 +36,7 @@ const GamePage = () => {
         fetch("http://localhost:1337/api/matches/2?populate=teams.players")
             .then( responce => {
                 if (responce.ok) {
-                    return responce.json()
+                    return responce.json() as Promise<Match>
                 }
                 throw responce
             })
@@ -52,7 +53,6 @@ const GamePage = () => {
 
     }, []);
 
-
     if (loading) return (
         <div style={{width: "100%", height: 700, display: "flex", alignItems: "center", justifyContent: "center"}}>
             <h1>Loading....</h1>
@@ -63,7 +63,7 @@ const GamePage = () => {
     return (
         <>
             <main>
-                <PageSectionHeader value={"Матч " + {game} + "- Natus Vincere (завершен)"} fontSize={30}/>
+                <PageSectionHeader value={"Матч " + `${game.attributes.teams.data[0].attributes.name}` + " - " + `${game.attributes.teams.data[1].attributes.name}` + " завершен"} fontSize={30}/>
                 <div className="under__header__info">
                     <div>
                         <time dateTime="04-07-2020">Jun 4, 2020</time>
@@ -90,7 +90,7 @@ const GamePage = () => {
                 <div className="line__game"/>
                 <div style={{width: '100%', height: '100%', opacity: 0.05, border: '0.50px black solid'}}
                      className="picked__line"></div>
-                <GameSection />
+                <GameSection game={game}/>
             </main>
             <GamesPredictions />
             <SubscribeSection />

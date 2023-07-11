@@ -1,15 +1,18 @@
 import "./index.css"
 import simplePic from "../../assets/s1mple.png"
 import {FC} from "react";
+import {Player, Team} from "../../modules/types.ts";
 
 interface TeamItemProps {
-    img: string;
-    team: string[]
+    teams: Team[]
 }
 
 // TODO: add images and dynamic values and fix classname
 // @ts-ignore
-const TeamItem: FC<TeamItemProps> = ({img, team}) => {
+const TeamItem: FC<TeamItemProps> = ({ teams}) => {
+
+    console.log(teams[0].attributes.players.data[0].attributes.name)
+
 
 
     return (
@@ -20,10 +23,9 @@ const TeamItem: FC<TeamItemProps> = ({img, team}) => {
                     <td>
                         <div>
                             <div style={{display: "flex", alignItems: "center"}}>
-                                <img src={"src/assets/" + "EG" + ".svg"} alt="first team logo"/>
+                                <img src={"src/assets/" + `${teams[0].attributes.shortName}` + ".svg"} alt="first team logo" style={{width: 48, height: 30}}/>
                                 <b style={{fontSize: 22}}>
-                                    {team[0]}
-
+                                    {teams[0].attributes.name}
                                 </b>
                             </div>
                         </div>
@@ -31,9 +33,9 @@ const TeamItem: FC<TeamItemProps> = ({img, team}) => {
                     <td>
                         <div>
                             <div style={{display: "flex", alignItems: "center"}}>
-                                <img src={"src/assets/" + "EG" + ".svg"} alt="first team logo"/>
+                                <img src={"src/assets/" + `${teams[1].attributes.shortName}` + ".svg"} alt="first team logo" style={{width: 48, height: 30}}/>
                                 <b style={{fontSize: 22}}>
-                                    {team[0]}
+                                    {teams[1].attributes.name}
 
                                 </b>
                             </div>
@@ -42,16 +44,17 @@ const TeamItem: FC<TeamItemProps> = ({img, team}) => {
                 </tr>
                 </thead>
                 <tbody>
-                {[1, 2, 3, 4, 5].map(_elem => (
+
+                { [1, 2, 3 ,4 ,5].map((_elem, index) => (
                     <tr>
                         <td>
                             <div style={{display:"flex"}}>
                                 <div style={{display: "flex", alignItems: "end"}}>
-                                    <img src={simplePic} alt=""/>
+                                    <img src={"src/assets/" + `${teams[0].attributes.players.data[index].attributes.nickname}` + ".png"} alt=""/>
                                 </div>
                                 <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                                    <b>s1mple</b>
-                                    <p>Александр Костылев</p>
+                                    <b>{teams[0].attributes.players.data[index].attributes.nickname}</b>
+                                    <p>{teams[0].attributes.players.data[index].attributes.name}</p>
                                 </div>
                             </div>
 
@@ -59,22 +62,22 @@ const TeamItem: FC<TeamItemProps> = ({img, team}) => {
                         <td>
                             <div style={{display:"flex"}}>
                                 <div style={{display: "flex", alignItems: "end"}}>
-                                    <img src={simplePic} alt=""/>
+                                    <img src={"src/assets/" + `${teams[1].attributes.players.data[index].attributes.nickname}` + ".png"} alt={teams[1].attributes.players.data[index].attributes.nickname + " picture"}/>
                                 </div>
                                 <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                                    <b>s1mple</b>
-                                    <p>Александр Костылев</p>
+                                    <b>{teams[1].attributes.players.data[index].attributes.nickname}</b>
+                                    <p>{teams[1].attributes.players.data[index].attributes.name}</p>
                                 </div>
                             </div>
                         </td>
                     </tr>
-                ))}
+                ))
+                }
 
 
                 </tbody>
             </table>
         </div>
-
 
 
     );

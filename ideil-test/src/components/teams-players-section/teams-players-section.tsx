@@ -1,18 +1,20 @@
 import "./index.css"
 import TeamItem from "../team-item/team-item.tsx";
+import {Team} from "../../modules/types.ts";
+import {FC} from "react";
 
-import g2logo from "../../assets/G2.svg"
+interface TeamsPlayersSection {
+    teams: Team[]
+}
 
-
-const TeamsPlayersSection = () => {
-
-    const naVi = ['Natus Vincere'];
+const TeamsPlayersSection: FC<TeamsPlayersSection> = ({teams}) => {
+    console.log(teams   )
 
     return (
         <div className="teams__players__section">
             <h1 >Команды и составы</h1>
             <div className="teams__squads">
-                    <TeamItem img={g2logo} team={naVi}/>
+                    <TeamItem teams={teams}/>
             </div>
         </div>
     );

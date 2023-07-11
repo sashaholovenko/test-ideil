@@ -28,3 +28,39 @@ export interface teams {
         }
     }
 }
+
+
+export interface Match {
+    id: number;
+    attributes: {
+        matchDate: string;
+        teamOneId: number | null;
+        teamTwoId: number | null;
+        winner: string | null;
+        score: string;
+        stageOfMatch: string;
+        formatOfMatch: string;
+        teams: {
+            data: Team[];
+        };
+    };
+}
+
+export interface Team {
+    id: number;
+    attributes: {
+        name: string;
+        shortName: string;
+        players: {
+            data: Player[];
+        };
+    };
+}
+
+export interface Player {
+    id: number;
+    attributes: {
+        name: string;
+        nickname: string;
+    };
+}

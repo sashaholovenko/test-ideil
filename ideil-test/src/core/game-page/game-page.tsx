@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import SubscribeSection from "../../modules/subscribe-section/subscribe-section.tsx";
 import GamesPredictions from "../../modules/games-predictions/games-predictions.tsx";
 import {Match} from "../../modules/types.ts";
+import {Helmet} from "react-helmet";
 // import {teams} from "../../modules/types.ts";
 
 // interface gameProps {
@@ -62,6 +63,13 @@ const GamePage = () => {
 
     return (
         <>
+            <Helmet>
+                <meta
+                    name="describtion"
+                    content={`Page of the game between ${game.attributes.teams.data[0].attributes.name} and ${game.attributes.teams.data[1].attributes.name}`}
+                />
+                <title>{`${game.attributes.teams.data[0].attributes.name} vs ${game.attributes.teams.data[1].attributes.name}. Stats, Face to Face Games, Results`}</title>
+            </Helmet>
             <main>
                 <PageSectionHeader value={"Матч " + `${game.attributes.teams.data[0].attributes.name}` + " - " + `${game.attributes.teams.data[1].attributes.name}` + " завершен"} fontSize={30}/>
                 <div className="under__header__info">

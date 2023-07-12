@@ -1,11 +1,11 @@
-.game__history-wrapper {
+.game-history-wrapper {
     margin-top: 15px;
 }
 
-.games__history {
+.games-history {
     margin-top: 50px;
 }
 
-.games__history h2 {
+.games-history h2 {
     font-size: 30px;
 }

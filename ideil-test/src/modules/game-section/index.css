@@ -1,36 +1,29 @@
-.game__section {
+.game-section {
     width: 65%;
     margin: 20px auto;
 }
 
-.game__section h1 {
+.game-section h1 {
     margin-top: 60px;
     font-size: 30px;
-    font-family: Formular;
     font-weight: 1000;
     line-height: 42px;
     word-wrap: break-word;
 }
 
-.game__summary__info {
+.summary__info {
     height: 30px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    color: #000;
-    text-align: center;
     font-size: 18px;
-    font-family: Formular;
-    font-style: normal;
-    line-height: normal;
     margin-top: 40px;
 }
 
-.game__summary__main {
+.summary-main {
     display: flex;
     flex-direction: row;
     margin-left: 70px;
@@ -39,15 +32,16 @@
     margin-top: 20px;
 }
 
-.summary__first {
+.summary-main__team {
     width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+
 }
 
-.summary__score {
+.summary-main__score {
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -63,7 +57,7 @@
     position: relative;
 }
 
-.summary__team__photo {
+.summary-main__team-photo {
     width: 140px;
     height: 149px;
     border: 1px solid rgba(234,234,238,0.71);
@@ -71,20 +65,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.summary__team__name {
+.summary-main__team-name {
     margin-top: 10px;
     text-align: center;
 }
 
-.summary__team__name p {
-    font-family: Formular;
+.summary-main__team-name p {
     font-weight: 900;
     font-size: 21px;
 }
 
-.summary__team__last__matches {
+.summary-main__last-matches {
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -107,10 +101,10 @@
     background-color: rgba(56,196,80,0.71);
 }
 
-.summary__winner {
+.summary-main__winner {
     position: absolute;
-    top: 0px;
-    right: 15px;
+    top: 0;
+    right: -30px;
     height: 50px;
     width: 50px;
     background-color: rgba(56,197,80,0.71);
@@ -119,9 +113,8 @@
     justify-content: center;
     align-items: center;
 }
-.summary__winner p {
+.summary-main__winner p {
     color: white;
-    font-family: Formular;
     font-size: 21px;
     font-weight: 700;
 
@@ -137,7 +130,7 @@
     justify-content: center;
 }
 
-.summary__score__count {
+.summary-main__score-count {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +141,7 @@
     background-color: black;
 }
 
-.summary__score__result {
+.summary-main__score-result {
     color: black;
     font-size: 18px;
     font-family: 'Formular';
@@ -158,7 +151,7 @@
     text-align: center;
 }
 
-.game__summary__tournament {
+.game-summary__tournament {
     height: 50px;
     border: 2px solid rgba(232,232,232,0.71);
     margin-top: 45px;
@@ -170,15 +163,9 @@
     padding-right: 60px;
 }
 
-.game__summary__tournament {
-    color: black;
-    font-size: 16px;
-    font-family: Formular;
-    font-weight: 400;
-    word-wrap: break-word
-}
 
-.summary__tournament__item {
+
+.game-summary__tournament-item {
     display: flex;
     flex-direction: column;
     text-align: center;

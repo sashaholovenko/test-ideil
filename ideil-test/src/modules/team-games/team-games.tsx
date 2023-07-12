@@ -5,10 +5,12 @@ import "./index.css"
 import TeamAboutGame from "../../components/team-about-game/team-about-game.tsx";
 
 const TeamGames = () => {
+    // TODO: Make one reusable component for last and upcoming games instead of <TeamsUpcomingGames/> and <TeamsLastGames/>
+
     return (
-        <div className="team__games">
+        <div className="team-games">
             <TeamsUpcomingGames />
-            <TeamsLastGames><h2 style={{fontSize: "30px", marginBottom: 20}}>Прошедшие матчи</h2></TeamsLastGames>
+            <TeamsLastGames />
             <TeamsGamesHistory/>
             <TeamAboutGame/>
         </div>

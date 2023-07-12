@@ -1,11 +1,11 @@
-.game__results__header {
+.game-results-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.game__results__header h2 {
+.game-results-header h2 {
     color: #000;
     font-size: 24px;
     font-style: normal;
@@ -13,13 +13,13 @@
     line-height: normal;
 }
 
-.game__results__score {
+.game-results-header__score {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.game__results__score__elem {
+.game-results-header__score-count {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@
     line-height: normal;
 }
 
-.game__results__team__logo {
+.game-results-header__team-logo {
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -44,7 +44,7 @@
     align-items: center;
 }
 
-.game__results__maps__tab {
+.game-results-header__maps-tab {
     color: rgba(128,128,128,0.71);
     text-align: right;
     font-size: 18px;
@@ -56,28 +56,28 @@
     align-items: center;
 }
 
-.game-results__rounds {
+.game-results-rounds {
     width: 100%;
 }
 
-.game-results__rounds table {
+.game-results-rounds table {
     table-layout: fixed;
     border-collapse: collapse;
 }
 
-.game-results__rounds td {
+.game-results-rounds td {
     text-align: center;
 
 }
 
-.game-results__rounds p {
+.game-results-rounds p {
     font-size: 16px;
 
 }
 
-.game-results__rounds td {
+.game-results-rounds td {
     vertical-align: center;
 }
 
-.game-results__rounds tr:first-child td {
+.game-results-rounds tr:first-child td {
 }

@@ -4,8 +4,8 @@ import malta from "../../assets/malta-tournament.png"
 
 const GamesHistoryItem = () => {
     return (
-        <div className="games__history__item">
-            <div className="games__history__item-time">
+        <div className="games-history-item">
+            <div className="games-history-item__time">
                 <span>Playoffs - bo3</span>
                 <time dateTime="2023-06-11 19:44+03:00">
                     <span>
@@ -13,18 +13,18 @@ const GamesHistoryItem = () => {
                     </span>
                 </time>
             </div>
-            <div className="games__history__item-overview">
+            <div className="games-history-item__overview">
                 <div style={{display: "flex", alignItems: "center", gap: 10}}>
                     <span>
                         <b>NaVi</b>
                     </span>
-                    <div className="games__history-image-wrapper">
+                    <div className="games-history-item__image-wrapper">
                         <img src={naviLogo} alt=""/>
                     </div>
                 </div>
-                <div className="games__history__item-score"> 2 - 1</div>
+                <div className="games-history-item__score"> 2 - 1</div>
                 <div style={{display: "flex", alignItems: "center", gap: 10}}>
-                    <div className="games__history-image-wrapper">
+                    <div className="games-history-item__image-wrapper">
                         <img src={naviLogo} alt=""/>
                     </div>
                     <span>
@@ -32,8 +32,8 @@ const GamesHistoryItem = () => {
                     </span>
                 </div>
             </div>
-            <div className="games__history__item-tournament">
-                <div className="games__history-tournament-image-wrapper">
+            <div className="games-history-item__tournament">
+                <div className="games-history-item__tournament-image-wrapper">
                     <img src={malta} alt=""/>
                 </div>
                 <span>Major</span>

@@ -11,9 +11,9 @@ const TeamsPlayersSection: FC<TeamsPlayersSection> = ({teams}) => {
     console.log(teams   )
 
     return (
-        <div className="teams__players__section">
+        <div className="teams-players-section">
             <h1 >Команды и составы</h1>
-            <div className="teams__squads">
+            <div className="teams-squads">
                     <TeamItem teams={teams}/>
             </div>
         </div>

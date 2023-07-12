@@ -72,22 +72,22 @@
 /* .c-table__row {*/
 /*     border-bottom: 1px solid rgba(0,0,0,.1);*/
 /* }*/
-.team__item {
+.team-squads__item {
     width: 100%;
 }
-.team__item table {
+.team-squads__item table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
-.team__item thead tr {
+.team-squads__item thead tr {
     border-bottom: 2px solid rgba(153,153,153,0.71);
 }
-.team__item tbody td {
+.team-squads__item tbody td {
     padding-top: 10px;
     border-bottom: 1px solid rgba(229,229,229,0.71);
 }
-.team__item tbody {
+.team-squads__item tbody {
     border-collapse: separate;
     border-spacing: 10px;
 }

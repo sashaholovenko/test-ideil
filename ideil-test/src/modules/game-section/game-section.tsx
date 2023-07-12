@@ -17,7 +17,7 @@ const GameSection: FC<GameSectionProps> = ({game}) => {
 
 
     return (
-        <div className="game__section">
+        <div className="game-section">
 
             <GameSummary game={game}/>
             <TeamsPlayersSection teams={game.attributes.teams.data}/>

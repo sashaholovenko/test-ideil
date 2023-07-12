@@ -1,13 +1,11 @@
 import "./index.css"
-import simplePic from "../../assets/s1mple.png"
 import {FC} from "react";
-import {Player, Team} from "../../modules/types.ts";
+import {Team} from "../../modules/types.ts";
 
 interface TeamItemProps {
     teams: Team[]
 }
 
-// TODO: add images and dynamic values and fix classname
 // @ts-ignore
 const TeamItem: FC<TeamItemProps> = ({ teams}) => {
 
@@ -16,7 +14,7 @@ const TeamItem: FC<TeamItemProps> = ({ teams}) => {
 
 
     return (
-        <div  className="team__item">
+        <div  className="team-squads__item">
             <table>
                 <thead>
                 <tr>

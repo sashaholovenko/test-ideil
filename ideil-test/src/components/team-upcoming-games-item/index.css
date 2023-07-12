@@ -1,4 +1,4 @@
-.upcoming__games-item {
+.upcoming-games__item {
     padding-left: 20px;
     display: flex;
     align-items: center;
@@ -6,9 +6,9 @@
     border-width: 1px 0 0 0;
 }
 
-.upcoming__games-item p {}
+.upcoming-games__item p {}
 
-.upcoming__games-image-wrapper {
+.upcoming-games__image-wrapper {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -20,14 +20,14 @@
     margin-bottom: 10px;
 }
 
-.upcoming__games time {
+.upcoming-games time {
     font-size: 19px;
     font-weight: 800;
     width: 80px;
     text-align: center;
 }
 
-.upcoming__games-tournament-image {
+.upcoming-games__tournament-image {
     height: 30px;
     border: 1px solid rgba(229,229,229,0.71);
     width: 30px;

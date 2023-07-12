@@ -1,4 +1,4 @@
-.games__history__item {
+.games-history-item {
     width: 100%;
     min-height: 75px;
     display: flex;
@@ -8,11 +8,11 @@
     border-width: 1px 0 0 0;
 }
 
-.games__history__item b {
+.games-history-item b {
     font-size: 16px;
 }
 
-.games__history__item-score {
+.games-history-item__score {
     width: 60px;
     height: 30px;
     display: flex;
@@ -24,25 +24,25 @@
     font-weight: 700;
 }
 
-.games__history__item-overview {
+.games-history-item__overview {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-.games__history__item-time {
+.games-history-item__time {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.games__history__item-tournament {
+.games-history-item__tournament {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.games__history-image-wrapper {
+.games-history-item__image-wrapper {
     width: 60px;
     height: 60px;
     border: 1px solid rgba(221,221,221,0.71);
@@ -52,7 +52,7 @@
     justify-content: center;
 }
 
-.games__history-tournament-image-wrapper {
+.games-history-item__tournament-image-wrapper {
     width: 30px;
     height: 30px;
     border: 1px solid rgba(221,221,221,0.71);

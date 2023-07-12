@@ -6,14 +6,14 @@ const TeamsUpcomingGames = () => {
     return (
         <div>
             <h2 style={{fontSize: "30px", marginBottom: 20}}>Предстоящие матчи</h2>
-            <div className="upcoming__games">
-                <div className="upcoming__games-first">
+            <div className="upcoming-games">
+                <div className="upcoming-games__first">
                     <h3>Пятница 25 июля 2021</h3>
                     { [1,2, 3].map( _elem => (
                         <TeamsUpcomingGamesItem/>
                     ))}
                 </div>
-                <div className="upcoming__games-second">
+                <div className="upcoming-games__second">
                     <h3>Суббота 26 июля 2021</h3>
                     { [1,2, 3].map( _elem => (
                         <TeamsUpcomingGamesItem />

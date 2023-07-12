@@ -90,7 +90,7 @@
     padding: 20px 0 20px 0;
 }
 
-.roasters-team {
+.roasters__team {
     display: flex;
     align-items: center;
     gap: 15px;

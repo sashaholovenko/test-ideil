@@ -1,10 +1,10 @@
-.games__predictions-wrapper {
+.games-predictions-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 20px 20px 20px 20px;
 }
 
-.games__predictions h1 {
+.games-predictions h1 {
     font-size: 42px;
     margin-left: 20px;
 }

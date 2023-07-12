@@ -1,11 +1,11 @@
-.games__predictions__item {
+.games-predictions-item {
     height: 360px;
     border: 1px solid rgba(188,188,188,0.71);
     width: 24%;
 
 }
 
-.games__predictions__item-preview {
+.games-predictions-item__preview {
     background-color: #EA0029;
     height: 50%;
     display: flex;
@@ -17,7 +17,7 @@
 
 
 
-.games__prediction-image-wrapper {
+.games-prediction-item__image-wrapper {
     height: 60px;
     width: 60px;
     background-color: white;
@@ -27,7 +27,7 @@
     justify-content: center;
 }
 
-.games__predictions-time {
+.games-predictions-item__time {
     height: 100px;
     color: white;
     text-align: center;
@@ -37,7 +37,7 @@
     gap: 20px;
 }
 
-.games__prediction-coefficient {
+.games-prediction-item__coefficient {
     background-color: white;
     text-align: center;
     font-size: 18px;
@@ -45,26 +45,28 @@
     padding-bottom: 5px;
 }
 
-.games__predictions__item-logos {
+.games-predictions-item__logos {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.games__predictions__item-info {
+.games-predictions-item__info {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    margin-top: 20px;
+    /*gap: 80px;*/
+    height: 50%;
     margin-left: 24px;
+    justify-content: space-between;
 }
 
-.games__predictions__item-info h3 {
+.games-predictions-item__info h3 {
     font-size: 20px;
 }
 
-.games__predictions-info-author {
+.games-predictions-item__author {
     display: flex;
     gap: 10px;
     align-items: end;
+    padding-bottom: 10px;
 }

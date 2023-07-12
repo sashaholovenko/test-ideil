@@ -23,23 +23,22 @@ const GameResults: FC<GameResultProps> = ({game}) => {
     return (
         <div>
             <h1>Результаты матча</h1>
-            <div className="game__results__header">
+            <div className="game-results-header">
                 <div><h2>Карта Mirage</h2></div>
-                <div className="game__results__score ">
-                    <div className="game__results__team__logo">
+                <div className="game-results-header__score ">
+                    <div className="game-results-header__team-logo">
                         <img src={g2Logo} alt="ogLogo" style={{width: 57, height: 40}}/>
                     </div>
-                    <div className="game__results__score__elem"><p>9 - 16</p></div>
-                    <div className="game__results__team__logo">
+                    <div className="game-results-header__score-count"><p>9 - 16</p></div>
+                    <div className="game-results-header__team-logo">
                         <img src={naviLogo} alt="naviLogo" style={{width: 57, height: 40}}/>
-
                     </div>
                 </div>
-                <div className="game__results__maps__tab">
+                <div className="game-results-header__maps-tab">
                     <p>9-6 / 7-3</p>
                 </div>
             </div>
-            <table className="game-results__rounds">
+            <table className="game-results-rounds">
                 <tbody>
                 <tr>
                     <td>+</td>
@@ -116,35 +115,33 @@ const GameResults: FC<GameResultProps> = ({game}) => {
             </table>
             <h3 style={{fontSize: 22, marginTop: 20}}>Статистика за карту</h3>
             <PlayersStats game={game} img={false}/>
-            <div className="game__results__header">
+            <div className="game-results-header">
                 <div><h2>Карта Mirage</h2></div>
-                <div className="game__results__score ">
-                    <div className="game__results__team__logo">
+                <div className="game-results-header__score ">
+                    <div className="game-results-header__team-logo">
                         <img src={g2Logo} alt="ogLogo" style={{width: 57, height: 40}}/>
                     </div>
-                    <div className="game__results__score__elem"><p>9 - 16</p></div>
-                    <div className="game__results__team__logo">
+                    <div className="game-results-header__score-count"><p>9 - 16</p></div>
+                    <div className="game-results-header__team-logo">
                         <img src={naviLogo} alt="naviLogo" style={{width: 57, height: 40}}/>
-
                     </div>
                 </div>
-                <div className="game__results__maps__tab">
+                <div className="game-results-header__maps-tab">
                     <p>9-6 / 7-3</p>
                 </div>
             </div>
-            <div className="game__results__header">
+            <div className="game-results-header">
                 <div><h2>Карта Mirage</h2></div>
-                <div className="game__results__score ">
-                    <div className="game__results__team__logo">
+                <div className="game-results-header__score ">
+                    <div className="game-results-header__team-logo">
                         <img src={g2Logo} alt="ogLogo" style={{width: 57, height: 40}}/>
                     </div>
-                    <div className="game__results__score__elem"><p>9 - 16</p></div>
-                    <div className="game__results__team__logo">
+                    <div className="game-results-header__score-count"><p>9 - 16</p></div>
+                    <div className="game-results-header__team-logo">
                         <img src={naviLogo} alt="naviLogo" style={{width: 57, height: 40}}/>
-
                     </div>
                 </div>
-                <div className="game__results__maps__tab">
+                <div className="game-results-header__maps-tab">
                     <p>9-6 / 7-3</p>
                 </div>
             </div>

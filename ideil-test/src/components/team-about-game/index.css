@@ -1,18 +1,18 @@
-.team__games_about {
+.team-games-about {
     width: 70%;
     margin: 60px auto;
 }
 
-.team__games_about p {
+.team-games-about p {
     font-size: 22px;
 }
 
-.teams__games__about-questions h2 {
+.team-games-questions h2 {
     margin-top: 40px;
     font-size: 30px;
 }
 
-.teams__games-questions {
+.teams-games-questions__item {
     display: flex;
     align-items: center;
     justify-content: space-between ;
@@ -21,12 +21,12 @@
     min-height: 60px;
 }
 
-.teams__games-questions b {
+.teams-games-questions__item b {
     font-size: 22px;
 
 }
 
-.teams__games-expand {
+.team-games-about__expand {
     position: relative;
     border-radius: 42px;
     border: 1px solid #000;
@@ -39,16 +39,12 @@
     margin-top: 20px;
 }
 
-.teams__games-expand:hover {
+.team-games-about__expand:hover {
     cursor: pointer;
 }
 
-.teams__games-expand-button {
-    position: relative;
-    font-size: 16px;
+.team-games-about__button {
     display: flex;
-    font-family: Formular;
-    color: #000;
     text-align: center;
     align-items: center;
     justify-content: center;

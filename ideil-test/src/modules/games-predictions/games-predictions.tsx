@@ -3,9 +3,9 @@ import "./index.css"
 
 const GamesPredictions = () => {
     return (
-        <aside className="games__predictions">
+        <aside className="games-predictions">
             <h1>ДРУГИЕ ПРОГНОЗЫ CS GO</h1>
-            <div className="games__predictions-wrapper">
+            <div className="games-predictions-wrapper">
                 <GamesPredictionsItem/>
                 <GamesPredictionsItem/>
                 <GamesPredictionsItem/>

@@ -4,9 +4,9 @@ import ShowMoreButton from "../../UI/show-more-button/show-more-button.tsx";
 
 const TeamsGamesHistory = () => {
     return (
-        <div className="games__history">
+        <div className="games-history">
             <h2>История встреч между G2 и NaVi</h2>
-            <div className="game__history-wrapper">
+            <div className="game-history-wrapper">
                 {[1,2,3].map( _elem => (
                         <GamesHistoryItem/>
                     )

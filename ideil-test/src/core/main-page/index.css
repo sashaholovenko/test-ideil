@@ -1,4 +1,4 @@
-.main__header {
+.main-header {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -12,14 +12,14 @@
     margin-bottom: 26px;
 }
 
-.game__filters {
+.game-filters {
     height: 40px;
     flex-shrink: 0;
     display: flex;
     flex-direction: row;
 }
 
-.game__filter {
+.game-filters-item {
     border-radius: 42px;
     border: 3px solid #000;
     box-sizing: border-box;
@@ -28,25 +28,25 @@
     display: flex;
     align-items: center;
 }
-.game__filter:first-child {
+.game-filters-item:first-child {
     margin-left: 21px;
 }
 
-.game__filter__logo {
+.game-filters-item__logo {
     width: 28px;
     height: 28px;
     margin-top: 6px;
     margin-left: 22px;
     margin-bottom: 6px;
 }
-.game__filter__text {
+.game-filters-item__text {
     font-size: 18px;
     color: #000;
     text-align: center;
     margin: 10px 18px 8px 10px;
 }
 
-.matches__timezone {
+.time-status-filters {
     font-size: 18px;
     font-weight: 400;
     word-wrap: break-word;
@@ -76,7 +76,7 @@
 
 
 
-.matches__filter img {
+.matches-filters img {
     padding-top: 5px;
 }
 .line {
@@ -88,14 +88,14 @@
 
 }
 
-.timezones__filters {
+.side-filters {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-right: 40px;
 }
 
-.match__filter__choosen {
+.choosen {
     background-color: #f5f5f5;
     border-radius: 42px;
     height: 41px;
@@ -105,7 +105,7 @@
     padding-right: 10px;
     padding-left: 10px;
 }
-.matches__filter {
+.matches-filters {
     display: flex;
     color: black;
     font-size: 18px;
@@ -116,7 +116,7 @@
     margin-top: 40px;
 }
 
-.tournaments__filters {
+.tournaments-filters {
     width: 90%;
     display: flex;
     gap: 15px;
@@ -128,7 +128,7 @@
     margin-right: 20px;
 }
 
-.tournament__item {
+.tournaments-filters__item {
     background: #F5F5F5;
     color: black;
     font-weight: 400;
@@ -143,17 +143,17 @@
     padding-right: 15px;
 }
 
-.tournament__item:hover {
+.tournaments-filters__item:hover {
     cursor: pointer;
 }
 
-.tournament__item__active {
+.tournaments-filters__item-active {
     background: black;
     color: white;
 }
 
 
-.games__large {
+.games-large {
     margin-left: 25px;
     margin-top: 60px;
     display: flex;
@@ -167,7 +167,7 @@
 
 
 
-.games__normal {
+.games-normal {
     padding-left: 25px;
     margin-top: 25px;
     display: flex;
@@ -179,6 +179,3 @@
 }
 
 
-.games__normal__item:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
-}

@@ -7,7 +7,7 @@ interface PageSectionHeader {
 
 const PageSectionHeader: FC<PageSectionHeader> = ({value, fontSize}) => {
     return (
-        <div className="main__header" style={{fontSize: `${fontSize}px`}}>
+        <div className="main-header" style={{fontSize: `${fontSize}px`}}>
             <h1>{value}</h1>
         </div>
     );

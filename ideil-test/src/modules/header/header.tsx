@@ -10,7 +10,7 @@ const Header = () => {
             <header className="header">
                 <img src={unionSVG} alt="union"  className="union__logo"/>
                 <img src={frameSVG} alt="frame" className="frame__logo"/>
-                <nav className="nav__panel">
+                <nav className="header__nav-panel">
                     <h3>СТАВКИ НА СПОРТ</h3>
                     <h3> ИГРЫ</h3>
                     <h3>ТУРНИРЫ</h3>
@@ -19,8 +19,8 @@ const Header = () => {
                     <h3>ЕЩЁ...</h3>
                 </nav>
 
-                <img src={searchSVG} alt="search-logo" className="search__logo"/>
-                <div className="language__selection">
+                <img src={searchSVG} alt="search-logo" className="header__search-logo"/>
+                <div className="header__language-selection">
                     <h3>RU</h3>
                 </div>
             </header>

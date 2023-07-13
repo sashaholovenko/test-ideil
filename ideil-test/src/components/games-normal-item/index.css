@@ -1,4 +1,4 @@
-.games__normal__item {
+.games-normal-item {
     flex-basis: 24%;
     position: relative;
     background-color: #fff;
@@ -10,28 +10,24 @@
 
 }
 
-.games__normal__item:hover {
+.games-normal-item:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
-.game__format {
+
+.games-normal-item__format {
     position: absolute;
     left: 20px;
     top: 20px;
-    color: black;
-    font-size: 16px;
-    font-family: Formular;
-    font-weight: 400;
     word-wrap: break-word
 }
 
-.game__status {
+.games-normal-item__status {
     position: absolute;
     right: 20px;
     top: 20px;
     color: black;
     font-size: 16px;
-    font-family: Formular;
     font-weight: 700;
     word-wrap: break-word;
     display: flex;
@@ -40,7 +36,7 @@
 
 }
 
-.game__status__logo {
+.games-normal-item__status-logo {
     width: 10px;
     height: 10px;
     background: #38C550;
@@ -48,19 +44,14 @@
     margin-top: 5px;
 }
 
-.game__score {
+.games-normal-item__score {
     width: 100%;
     margin-top: 65px;
     display: flex;
     justify-content: center;
-    color: black;
-    font-size: 16px;
-    font-family: Formular;
-    font-weight: 400;
-    word-wrap: break-word
 }
 
-.game__teams {
+.games-normal-item__teams {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -69,10 +60,9 @@
     left: 12%;
 }
 
-.team__info {
+.games-normal-item__teams-info {
     color: black;
     font-size: 16px;
-    font-family: Formular;
     font-weight: 700;
     line-height: 32px;
     word-wrap: break-word;
@@ -82,7 +72,7 @@
     gap: 10px;
 }
 
-.game__status__text {
+.games-normal-item__status-text {
     display: flex;
     position: absolute;
     width: 100%;
@@ -94,24 +84,18 @@
 
 .red {background-color: red}
 
-.red__text {
+.red-text {
     height: 30px;
     background: #FE0000;
     text-align: center;
     color: white;
     font-size: 24px;
-    font-family: Formular;
-    font-weight: 700;
-    word-wrap: break-word;
-    color: white;
-    font-size: 24px;
-    font-family: Formular;
     font-weight: 700;
     word-wrap: break-word;
     padding: 4px 4px 4px 4px;
 }
 
-.tournament__info {
+.games-normal-item__tournament-info {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -120,12 +104,11 @@
     bottom: 20px;
     color: black;
     font-size: 16px;
-    font-family: Formular;
     font-weight: 400;
     word-wrap: break-word;
 }
 
-.game__date {
+.games-normal-item__date {
     width: 100%;
     margin-top: 65px;
     display: flex;
@@ -133,16 +116,14 @@
     align-items: center;
     color: black;
     font-size: 16px;
-    font-family: Formular;
     font-weight: 400;
     word-wrap: break-word
 }
 
-.game__date h3 {
+.games-normal-item__date h3 {
     color: #000;
     text-align: center;
     font-size: 25px;
-    font-family: Formular;
     font-style: normal;
     font-weight: 700;
     line-height: normal;

@@ -1,10 +1,10 @@
-.news__item {
+.news-section__item {
     width: 24%;
     height: 360px;
     background-color: white;
 }
 
-.news__text {
+.news-section__text {
     position: relative;
     background-color: #000;
     width: 35%;
@@ -15,12 +15,11 @@
 
 }
 
-.news__text p {
+.news-section__text p {
     position: relative;
     font-size: 12px;
     text-transform: uppercase;
     display: flex;
-    font-family: Formular;
     color: #fff;
     text-align: center;
     align-items: center;
@@ -30,7 +29,7 @@
     font-weight: 700;
 }
 
-.news__content {
+.news-section__content {
     position: relative;
     font-size: 20px;
     display: inline-block;

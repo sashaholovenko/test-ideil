@@ -6,34 +6,40 @@ const FooterNav = () => {
     const mainLinks = ["Ставки на спорт", "Игры", "Турниры", "Команды", "Игроки", "Дисциплины", "НОВОСТИ КИБЕРСПОРТА"]
     const sideLinks = ["Игры", "Обзоры", "Прогнозы", "Интервью", "Советы", "Цифры", "Киберспорт", "Слухи", "Туториалы"]
 
+    // TODO - replace <a> tags with <Link> tags from React Router
+
     return (
-        <div className="footer__nav">
-            <div className="footer__links">
-                <div className="footer__main__links">
+        <>
+            <div className="footer-links">
+                <div className="footer-links__main">
                     {mainLinks.map((link, index) => (
-                        <div className="main__link" key={index}>
-                            <p>{link}</p>
+                        <div className="footer-links__main-item" key={index}>
+                            <a href="">
+                                <p>{link}</p>
+                            </a>
                         </div>
                     ))}
                 </div>
-                <div className="footer__side__links">
+                <div className="footer-links__side">
                     {sideLinks.map((link, index) => (
-                        <div className="side__link" key={index}>
-                            <p>{link}</p>
+                        <div className="footer-links__side-item" key={index}>
+                            <a href="">
+                                <p>{link}</p>
+                            </a>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="footer__author__rights">
+            <div className="footer-author-rights">
                 <p>Все права защищены. Проект компании Eska8 LTD (номер компании 12050114), Великобритания.
                     Использование материалов разрешается путем предоставления ссылки (для онлайн - публикаций –
                     гиперссылки) на Signs FM.</p>
             </div>
-            <div className="footer__end">
-                <div className="water__mark">
+            <div className="footer-end">
+                <div className="footer-end__water-mark">
                     <b>©</b><p>2021 SIGNNNS.FM </p>
                 </div>
-                <div className="footer__end__docs">
+                <div className="footer-end__docs">
                     <div style={{display: "flex", alignItems: "center", gap: 10}}>
                         <img src={languageSVG} alt=""/>
                         <p>US - Browser Language</p>
@@ -46,7 +52,7 @@ const FooterNav = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

@@ -60,21 +60,21 @@ const GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
 
 
     return (
-        <div className="games__normal__item" onClick={() => navigate(`/${elem.id}`)}>
-            <div className="game__format"><p>bo1</p></div>
-            <div className="game__status">
-                <div className={_onlineMatch ? "game__status__logo" : "game__status__logo red"}>+</div>
+        <div className="games-normal-item" onClick={() => navigate(`/${elem.id}`)}>
+            <div className="games-normal-item__format"><p>bo1</p></div>
+            <div className="games-normal-item__status">
+                <div className={_onlineMatch ? "games-normal-item__status-logo" : "games-normal-item__status-logo red"}>+</div>
                 <p>{_onlineMatch ? "онлайн" : "soon"}</p>
             </div>
-            { _onlineMatch ? <div className="game__score"><p>{elem.attributes.score? "0 - 0" : "0 - 0"}</p></div>
+            { _onlineMatch ? <div className="games-normal-item__score"><p>{elem.attributes.score? "0 - 0" : "0 - 0"}</p></div>
                 :
-                <div className="game__date">
+                <div className="games-normal-item__date">
                     <p>{matchTime[3]}-{matchTime[4]} GMT - 3</p>
                     <h3>{matchTime[2]} {months[matchTime[2]]}</h3>
                 </div>
             }
-            <div className="game__teams">
-                <div className="team__info">
+            <div className="games-normal-item__teams">
+                <div className="games-normal-item__teams-info">
                     <div style={{
                         width: "60px",
                         height: "60px",
@@ -91,7 +91,7 @@ const GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
                     </div>
                     <p>{elem.attributes.teams.data["0"].attributes.name}</p>
                 </div>
-                <div className="team__info">
+                <div className="games-normal-item__teams-info">
                     <div style={{
                         width: "60px",
                         height: "60px",
@@ -110,11 +110,11 @@ const GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
                     <p>{elem.attributes.teams.data["1"].attributes.name}</p>
                 </div>
             </div>
-            { _onlineMatch ?   <div className="game__status__text"><p className="red__text">LIVE</p></div>
+            { _onlineMatch ?   <div className="games-normal-item__status-text"><p className="red-text">LIVE</p></div>
             :
             null
             }
-            <div className="tournament__info">
+            <div className="games-normal-item__tournament-info">
                 <img src={MaltaTour} alt=""/>
                 <p>International 2023</p>
             </div>

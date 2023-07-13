@@ -11,9 +11,9 @@ const TournamentsFilters = () => {
 
 
     return (
-            <div className="tournaments__filters">
+            <div className="tournaments-filters">
                 {tournaments.map( (tournament, index) => (
-                    <div key={index} className={tournament === tournamentFilter ? "tournament__item tournament__item__active" : "tournament__item"} onClick={() => setTournament(tournament)}>
+                    <div key={index} className={tournament === tournamentFilter ? "tournaments-filters__item tournaments-filters__item-active" : "tournaments-filters__item"} onClick={() => setTournament(tournament)}>
                         <p>{tournament}</p>
                     </div>
                 ))}

@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.news__section {
+.news-section {
     margin-right: 20px;
     margin-left: 20px;
     display: flex;
@@ -14,7 +14,7 @@
 
 }
 
-.news__header {
+.news-header {
      display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,14 +22,13 @@
     top: 20px;
 }
 
-.news__header__text {
-    font-family: Formular;
+.news-header__text {
     color: #fff;
     position: relative;
     left: 20px;
 }
 
-.news__header__pointers {
+.news-header__pointers {
     width: 5%;
     display: flex;
     position: relative;
@@ -37,7 +36,7 @@
     justify-content: space-between;
 }
 
-.open__more {
+.open-more {
     position: relative;
     border-radius: 42px;
     border: 1px solid white;
@@ -50,11 +49,10 @@
     align-items: center;
 }
 
-.open__more__button {
+.open-more__button {
     position: relative;
     font-size: 16px;
     display: flex;
-    font-family: Formular;
     color: white;
     text-align: center;
     align-items: center;
@@ -64,6 +62,6 @@
 
 }
 
-.open__more:hover {
+.open-more:hover {
     cursor: pointer;
 }

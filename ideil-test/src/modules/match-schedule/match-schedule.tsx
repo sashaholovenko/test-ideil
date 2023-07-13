@@ -11,7 +11,7 @@ interface MatchScheduleProps {
 const MatchSchedule: FC<MatchScheduleProps>= ({matches}) => {
 
     return (
-        <div className="match__schedule">
+        <div className="match-schedule">
             <MatchScheduleBlock matches={matches.slice(0, 3)} date="Пятница 30 июля 2021"/>
             <MatchScheduleBlock matches={matches.slice(3)} date="Среда 22 0июля 2021"/>
             <ShowMoreButton/>

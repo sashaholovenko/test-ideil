@@ -11,20 +11,20 @@ const NewsSection = () => {
     return (
         <aside>
             <div className="news">
-                <div className="news__header">
-                    <h1 className="news__header__text">Новости</h1>
-                    <div className="news__header__pointers">
+                <div className="news-header">
+                    <h1 className="news-header__text">Новости</h1>
+                    <div className="news-header__pointers">
                         <img src={PointerInactive} alt=""/>
                         <img src={PointerActive} alt=""/>
                     </div>
                 </div>
-                <div className="news__section">
+                <div className="news-section">
                     {news.map((_el, index) => (
                         <NewsItem key={index}/>
                     ))}
                 </div>
-                <div className="open__more">
-                    <b className="open__more__button">ВСЕ НОВОСТИ</b>
+                <div className="open-more">
+                    <b className="open-more__button">ВСЕ НОВОСТИ</b>
                 </div>
             </div>
             <SubscribeSection />

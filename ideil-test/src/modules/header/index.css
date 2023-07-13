@@ -9,7 +9,7 @@
 
 
 
-.nav__panel {
+.header__nav-panel {
     display: flex;
     width: 80%;
     height: 60px;
@@ -40,14 +40,14 @@
     margin: 18px 29px 18px 20px;
 }
 
-.search__logo {
+.header__search-logo {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
     margin: 23px 10px 19px 82px;
 }
 
-.language__selection {
+.header__language-selection {
     display: flex;
     width: 43px;
     height: 60px;

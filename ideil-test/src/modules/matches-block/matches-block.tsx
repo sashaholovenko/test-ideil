@@ -40,17 +40,15 @@ const MatchesBlock = () => {
     if (error) return "Error!";
     console.log(matches)
 
-    // const match = matches?[0] : null;
-    // const test = [match, match, match]
     return (
             <div className="games">
-                <div className="games__large">
+                <div className="games-large">
                     {matches ? matches.slice(0, 3).map((elem, index) => (
                         <GamesBigItem elem={elem} key={index}/>
                     )) : null}
                 </div>
 
-                <div className="games__normal">
+                <div className="games-normal">
                     {matches ? matches.slice(3).map( (elem, index) => (
                         <GamesNormalItem key={index} elem={elem}/>
                     )) : null}

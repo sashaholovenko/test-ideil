@@ -10,44 +10,44 @@ import "../../core/main-page/index.css"
 
 const MainFilters = () => {
     return (
-        <div className="main__filters">
-            <div className="game__filters">
-                <div className="game__filter">
-                    <img src={csgoSVG} alt="" className="game__filter__logo"/>
-                    <b className="game__filter__text">CS:GO</b>
+        <div className="main-filters">
+            <div className="game-filters">
+                <div className="game-filters-item">
+                    <img src={csgoSVG} alt="" className="game-filters-item__logo"/>
+                    <b className="game-filters-item__text">CS:GO</b>
                 </div>
-                <div className="game__filter">
-                    <img src={pugbSVG} alt="" className="game__filter__logo"/>
-                    <b className="game__filter__text">PUGB</b>
+                <div className="game-filters-item">
+                    <img src={pugbSVG} alt="" className="game-filters-item__logo"/>
+                    <b className="game-filters-item__text">PUGB</b>
                 </div>
-                <div className="game__filter">
-                    <img src={apexSVG} alt="" className="game__filter__logo"/>
-                    <b className="game__filter__text">Apex Legends</b>
+                <div className="game-filters-item">
+                    <img src={apexSVG} alt="" className="game-filters-item__logo"/>
+                    <b className="game-filters-item__text">Apex Legends</b>
                 </div>
-                <div className="game__filter">
-                    <img src={rainbowSVG} alt="" className="game__filter__logo"/>
-                    <b className="game__filter__text">Rainbow Six</b>
+                <div className="game-filters-item">
+                    <img src={rainbowSVG} alt="" className="game-filters-item__logo"/>
+                    <b className="game-filters-item__text">Rainbow Six</b>
                 </div>
-                <div className="game__filter">
-                    <img src={valorantSVG} alt="" className="game__filter__logo"/>
-                    <b className="game__filter__text">Valorant</b>
+                <div className="game-filters-item">
+                    <img src={valorantSVG} alt="" className="game-filters-item__logo"/>
+                    <b className="game-filters-item__text">Valorant</b>
                 </div>
-                <div className="game__filter">
-                    <img src={dotaSVG} alt="" className="game__filter__logo"/>
-                    <b className="game__filter__text">Dota2</b>
+                <div className="game-filters-item">
+                    <img src={dotaSVG} alt="" className="game-filters-item__logo"/>
+                    <b className="game-filters-item__text">Dota2</b>
                 </div>
             </div>
-            <div className="timezones__filters">
-                <div className="matches__timezone">
+            <div className="side-filters">
+                <div className="time-status-filters">
                     <span>Текущие</span><span>Завершенные</span><span className="timezone">Предстоящие</span>
                 </div>
-                <div className="matches__filter">
+                <div className="matches-filters">
                     <div style={{width: "50%", display: "flex", gap: 8}}>
                         <p>Команды</p>
                         <img src={filterDrop} alt=""/>
                     </div>
 
-                    <div className="match__filter__choosen">
+                    <div className="matches-filters-item choosen">
                         <p>Турниры</p>
                         <img src={filterUp} alt="" style={{maxWidth: 16}}/>
                     </div>

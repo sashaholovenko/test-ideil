@@ -26,7 +26,6 @@ const MainPage = () => {
                 <MatchesBlock />
             </main>
             <NewsSection />
-
         </>
     );
 };

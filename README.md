@@ -2,12 +2,12 @@
 To run app you should firstly install all dependencies in both strapi and react folders.
 To do that for React part use:
 ```
-cd ideil-test
+cd .\ideil-test\
 npm install
 ```
 To install strapi dependencies use: 
 ```
-cd strapi
+cd .\strappi\
 npm install
 ```
 Next important part is to import data into your strapi, because after cloning it from Github database will be empty. 

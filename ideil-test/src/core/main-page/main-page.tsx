@@ -14,7 +14,7 @@ const MainPage = () => {
         <>
             <Helmet>
                 <meta
-                    name="describtion"
+                    name="description"
                     content="Main page with list of games"
                 />
                 <title>CS:GO Matches page</title>

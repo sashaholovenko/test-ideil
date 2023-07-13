@@ -28,6 +28,16 @@
     background: black;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    margin-left: 314px;
+    margin-left: 260px;
     margin-top: 20px;
+}
+
+.timezones__filters {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.matches__timezone {
+    display: flex;
+    gap: 20px
 }

@@ -148,3 +148,7 @@
     border: solid #ddd;
     border-width: 1px 0px 1px 0px;
 }
+
+.match-schedule-item tr:hover {
+    cursor: pointer;
+}

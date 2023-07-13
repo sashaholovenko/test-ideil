@@ -8,53 +8,12 @@ import formatDate from "../../services/date-service.ts";
 const   GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
 
     const [onlineMatch, _setOnline] = useState<boolean>()
-    // const [matchTime, setMatchTime] = useState<number[]>([])
-    // const [userTime, setUserTime] = useState<number[]>([])
+
 
     const navigate = useNavigate()
 
     // TODO: rework logic of checking online match
 
-    // useEffect(() => {
-    //     @ts-ignore
-    //     const getTimeOfMatch = (value?: string) => {
-    //         let date;
-    //         if (value && typeof value === 'string') {
-    //             date = new Date(value);
-    //         } else {
-    //             date = new Date()
-    //         }
-    //         const [month, day, year, hour, minutes, seconds] = [
-    //             date.getMonth(),
-    //             date.getDate(),
-    //             date.getFullYear(),
-    //             date.getHours(),
-    //             date.getMinutes(),
-    //             date.getSeconds()
-    //         ];
-    //         return [year, month, day, hour, minutes, seconds]
-    //     }
-    //
-    //     const checkOnline = (userDate: number[], gameDate: number[]) => {
-    //         for (let i = 0; i <= 2; i++) {
-    //             if (userDate[i] === gameDate[i]) {
-    //                 continue
-    //             } else {
-    //                 return false
-    //             }
-    //         }
-    //         if ( userDate[3] >= gameDate[3]  && userDate[3] <= gameDate[3] ) {
-    //             return true
-    //         } else {
-    //             return false
-    //         }
-    //     }
-    //     setUserTime(getTimeOfMatch())
-    //
-    //     setMatchTime(getTimeOfMatch(elem.attributes.matchDate))
-    //     setOnline(checkOnline(userTime, matchTime))
-    //
-    // }, [])
 
     const formDate = formatDate(elem.attributes.matchDate).split(",")
 
@@ -68,18 +27,7 @@ const   GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
 
             <div className="games-normal-item__teams">
                 <div className="games-normal-item__teams-info">
-                    <div style={{
-                        width: "60px",
-                        height: "60px",
-                        background: "white",
-                        borderRadius: "60px",
-                        borderLeft: "0.50px #F6F6FA solid",
-                        borderTop: "0.50px #F6F6FA solid",
-                        borderRight: "0.50px #F6F6FA solid",
-                        borderBottom: "0.50px #F6F6FA solid",
-                        display: "flex",
-                        alignItems: "center"
-                    }}>
+                    <div className="games-normal-item__logo-wrapper" >
                         <img src={"/src/assets/" + elem.attributes.teams.data["0"].attributes.shortName + ".svg"} alt=""/>
                     </div>
                     <p>{elem.attributes.teams.data["0"].attributes.shortName}</p>
@@ -92,19 +40,7 @@ const   GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
                     </div>
                 }
                 <div className="games-normal-item__teams-info">
-                    <div style={{
-                        width: "60px",
-                        height: "60px",
-                        background: "white",
-                        borderRadius: "60px",
-                        borderLeft: "0.50px #F6F6FA solid",
-                        borderTop: "0.50px #F6F6FA solid",
-                        borderRight: "0.50px #F6F6FA solid",
-                        borderBottom: "0.50px #F6F6FA solid",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center"
-                    }}>
+                    <div className="games-normal-item__logo-wrapper" >
                         <img src={"/src/assets/" + elem.attributes.teams.data["1"].attributes.shortName + ".svg"} alt="" style={{width: 57, height: 40}}/>
                     </div>
                     <p>{elem.attributes.teams.data["1"].attributes.shortName}</p>

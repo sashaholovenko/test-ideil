@@ -3,6 +3,7 @@ import TeamItem from "../team-item/team-item.tsx";
 import {Team} from "../../modules/types.ts";
 import {FC} from "react";
 
+
 interface TeamsPlayersSection {
     teams: Team[]
 }

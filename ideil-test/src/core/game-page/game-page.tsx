@@ -1,6 +1,5 @@
 import PageSectionHeader from "../../components/UI/page-section-header/page-section-header.tsx";
-import twitterLogo from "../../assets/twitter-logo-small.svg"
-import facebookLogo from "../../assets/facebook-logo-small.svg"
+
 import "./index.css"
 import GameSection from "../../modules/game-section/game-section.tsx";
 import {useEffect, useState} from "react";
@@ -8,7 +7,9 @@ import SubscribeSection from "../../modules/subscribe-section/subscribe-section.
 import GamesPredictions from "../../modules/games-predictions/games-predictions.tsx";
 import {Match} from "../../modules/types.ts";
 import {Helmet} from "react-helmet";
-import formatDate from "../../services/date-service.ts";
+
+import GamePageFilters from "../../components/game-page-filters/game-page-filters.tsx";
+import {useParams} from "react-router-dom";
 // import {teams} from "../../modules/types.ts";
 
 // interface gameProps {
@@ -26,7 +27,6 @@ import formatDate from "../../services/date-service.ts";
 // }
 
 const GamePage = () => {
-    const filters = ["Общая информация", "Стрим", "Команды и составы", "Результаты матча", "Предстоящие матчи", "Частые вопросы"]
 
     // TODO: add players to other teams to make dynamic game page
 
@@ -34,10 +34,10 @@ const GamePage = () => {
     const [game, setGame] = useState<Match>({})
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
+    const {id} = useParams<{id: string}>();
 
     useEffect(() => {
-        fetch("http://localhost:1337/api/matches/2?populate=teams.players")
+        fetch(`http://localhost:1337/api/matches/${id}?populate=teams.players`)
             .then( responce => {
                 if (responce.ok) {
                     return responce.json() as Promise<Match>
@@ -77,32 +77,7 @@ const GamePage = () => {
             </Helmet>
             <main>
                 <PageSectionHeader value={"Матч " + `${game.attributes.teams.data[0].attributes.name}` + " - " + `${game.attributes.teams.data[1].attributes.name}` + " завершен"} fontSize={30}/>
-                <div className="under__header__info">
-                    <div>
-                        <time dateTime="04-07-2020">Jun 4, 2020</time>
-                    </div>
-                    <div className="under__header__social">
-                        <div className="social__item">
-                            <img src={twitterLogo} alt=""/>
-                            <p>Share</p>
-                        </div>
-                        <div className="social__item">
-                            <img src={facebookLogo} alt=""/>
-                            <p>Tweet</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="timezones__filters">
-                    <div className="matches__timezone">
-                        {filters.map( (filter, index) => (
-                            <span key={index}>{filter}</span>
-                        ))}
-                    </div>
-
-                </div>
-                <div className="line__game"/>
-                <div style={{width: '100%', height: '100%', opacity: 0.05, border: '0.50px black solid'}}
-                     className="picked__line"></div>
+                <GamePageFilters />
                 <GameSection game={game}/>
             </main>
             <GamesPredictions />

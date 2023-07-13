@@ -3,6 +3,7 @@ import React from "react";
 import MaltaTour from "../../assets/test.svg";
 import {teams} from "../../modules/types.ts";
 import formatDate from "../../services/date-service.ts";
+import {useNavigate} from "react-router-dom";
 
 interface MatchScheduleItem {
     match: {
@@ -23,9 +24,10 @@ const MatchScheduleItem: React.FC<MatchScheduleItem> = ({match}) => {
 
 
     const formDate = formatDate(match.attributes.matchDate).split(",")[1].split(" ")
-    console.log(formDate)
+
+    const navigate = useNavigate()
     return (
-                <tr>
+                <tr onClick={() => navigate(`/${match.id}`)}>
                     <td style={{width: "20%"}}><p>{match.attributes.stageOfMatch}
                         <br/>{match.attributes.formatOfMatch}</p></td>
                     <td style={{width: "60%"}}>

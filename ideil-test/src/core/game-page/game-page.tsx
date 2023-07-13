@@ -1,5 +1,4 @@
 import PageSectionHeader from "../../components/UI/page-section-header/page-section-header.tsx";
-
 import "./index.css"
 import GameSection from "../../modules/game-section/game-section.tsx";
 import {useEffect, useState} from "react";
@@ -10,25 +9,10 @@ import {Helmet} from "react-helmet";
 
 import GamePageFilters from "../../components/game-page-filters/game-page-filters.tsx";
 import {useParams} from "react-router-dom";
-// import {teams} from "../../modules/types.ts";
 
-// interface gameProps {
-//     data: {
-//         id: number
-//         attributes: {
-//             formatOfMatch: string
-//             matchDate: string
-//             score: string
-//             stageOfMatch: string
-//             teams: teams
-//         }
-//     }
-//
-// }
 
 const GamePage = () => {
 
-    // TODO: add players to other teams to make dynamic game page
 
     // @ts-ignore
     const [game, setGame] = useState<Match>({})
@@ -62,7 +46,11 @@ const GamePage = () => {
             <h1>Loading....</h1>
         </div>
     );
-    if (error) return "Error!";
+    if (error) return (
+        <div style={{width: "100%", height: 700, display: "flex", alignItems: "center", justifyContent: "center"}}>
+            <h1>Error....</h1>
+        </div>
+    );
 
 
 

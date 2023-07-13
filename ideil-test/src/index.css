@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Formular';
+  src:   url("./fonts/Formular.woff") format("woff"),
+          url("./fonts/Formular.woff2") format("woff2");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 :root {
   margin: 0;
     padding: 0;
@@ -7,16 +15,11 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Formular ,Arial,sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+  font-family: Formular;
 }
 
 
-@font-face {
-  font-family: 'Formular';
-  src: local('Formular'), url(./fonts/formular-regular-trial.otf) format('otf');
-  /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
-}
+
 
 /*a {*/
 /*  font-weight: 500;*/

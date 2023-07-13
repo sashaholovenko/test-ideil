@@ -5,18 +5,32 @@ import headerVectorSVG from "../../assets/header-vector.svg"
 import "./index.css"
 
 const Header = () => {
+
+
     return (
         <>
             <header className="header">
                 <img src={unionSVG} alt="union"  className="union__logo"/>
-                <img src={frameSVG} alt="frame" className="frame__logo"/>
+                <img src={frameSVG} alt="frame" className="frame__logo" />
                 <nav className="header__nav-panel">
-                    <h3>СТАВКИ НА СПОРТ</h3>
-                    <h3> ИГРЫ</h3>
-                    <h3>ТУРНИРЫ</h3>
-                    <h3>КОМАНДЫ</h3>
-                    <h3>ИГРОКИ</h3>
-                    <h3>ЕЩЁ...</h3>
+                    <a href="">
+                        <h3>СТАВКИ НА СПОРТ</h3>
+                    </a>
+                    <a href="">
+                        <h3> ИГРЫ</h3>
+                    </a>
+                    <a href="">
+                        <h3>ТУРНИРЫ</h3>
+                    </a>
+                    <a href="">
+                        <h3>КОМАНДЫ</h3>
+                    </a>
+                    <a href="">
+                        <h3>ИГРОКИ</h3>
+                    </a>
+                    <a href="">
+                        <h3>ЕЩЁ...</h3>
+                    </a>
                 </nav>
 
                 <img src={searchSVG} alt="search-logo" className="header__search-logo"/>

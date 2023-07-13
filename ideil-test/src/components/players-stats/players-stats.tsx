@@ -9,7 +9,6 @@ interface PlayersStatsProps {
 }
 
 const PlayersStats: FC<PlayersStatsProps> = ({game, img}) => {
-    // TODO: make props with arrays of th and td tags
 
     return (
         <div className="roasters">

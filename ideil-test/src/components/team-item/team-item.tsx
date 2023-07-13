@@ -45,8 +45,8 @@ const TeamItem: FC<TeamItemProps> = ({ teams}) => {
                 </thead>
                 <tbody>
 
-                { [1, 2, 3 ,4 ,5].map((_elem, index) => (
-                    <tr>
+                { [1, 2, 3 ,4 ,5].map((elem, index) => (
+                    <tr key={elem}>
                         <td>
                             <div style={{display:"flex"}}>
                                 <div style={{display: "flex", alignItems: "end"}}>

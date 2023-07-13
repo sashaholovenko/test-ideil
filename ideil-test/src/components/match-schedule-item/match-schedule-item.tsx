@@ -54,7 +54,7 @@ const MatchScheduleItem: React.FC<MatchScheduleItem> = ({match}) => {
 
                                     </div>
                                     <div>
-                                        <p className="team__name">{match.attributes.teams.data[1].attributes.name}</p>
+                                        <p className="match-schedule-item-main__second-team-name">{match.attributes.teams.data[1].attributes.name}</p>
                                     </div>
                                 </div>
                             </div>

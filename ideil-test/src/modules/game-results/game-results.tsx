@@ -41,7 +41,7 @@ const GameResults: FC<GameResultProps> = ({game}) => {
             <table className="game-results-rounds">
                 <tbody>
                 <tr>
-                    <td>+</td>
+                    <td></td>
                     <td>1</td>
                     <td>2</td>
                     <td>3</td>
@@ -69,16 +69,17 @@ const GameResults: FC<GameResultProps> = ({game}) => {
                     <td>{first}</td>
                     <td>{first}</td>
                     <td>{first}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{first}</td>
+                    <td>{first}</td>
+                    <td>{first}</td>
+                    <td>{first}</td>
+                    <td>{first}</td>
+                    <td>{first}</td>
                     <td>{first}</td>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>{first}</td>
                     <td>{first}</td>
                     <td>{first}</td>
                     <td>{first}</td>
@@ -108,7 +109,8 @@ const GameResults: FC<GameResultProps> = ({game}) => {
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>{first}</td>
+                    <td>{first}</td>
                 </tr>
 
                 </tbody>

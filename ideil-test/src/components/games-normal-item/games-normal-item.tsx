@@ -21,7 +21,7 @@ const   GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
         <div className="games-normal-item" onClick={() => navigate(`/${elem.id}`)}>
             <div className="games-normal-item__format"><p>bo1</p></div>
             <div className="games-normal-item__status">
-                <div className={onlineMatch ? "games-normal-item__status-logo" : "games-normal-item__status-logo red"}>+</div>
+                <div className={onlineMatch ? "games-normal-item__status-logo" : "games-normal-item__status-logo red"}></div>
                 <p>{onlineMatch ? "онлайн" : "soon"}</p>
             </div>
 
@@ -34,10 +34,10 @@ const   GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
                 </div>
                 { onlineMatch ? <div className="games-normal-item__score"><p>{elem.attributes.score? "0 - 0" : "0 - 0"}</p></div>
                     :
-                    <div className="games-normal-item__date">
+                    <time dateTime={elem.attributes.matchDate} className="games-normal-item__date">
                         <p>{formDate[1]}</p>
                         <h3>{formDate[0]}</h3>
-                    </div>
+                    </time>
                 }
                 <div className="games-normal-item__teams-info">
                     <div className="games-normal-item__logo-wrapper" >

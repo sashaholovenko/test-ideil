@@ -4,6 +4,7 @@ import NaviLogo from "../../assets/navi-logo.svg"
 import ScoreLine from "../../assets/score-line.svg"
 import {Match} from "../../modules/types.ts";
 import {FC} from "react";
+import formatDate from "../../services/date-service.ts";
 
 interface GameSummaryProps {
     game: Match
@@ -13,12 +14,15 @@ const GameSummary: FC<GameSummaryProps> = ({game}) => {
 
     // TODO: make logic for correct time and date output
 
+    const formDate = formatDate(game.attributes.matchDate, "en-GB")
+    console.log(formDate)
+
     return (
         <div className="game__summary">
             <div className="summary__info">
                 <b><p>D2CL 2021 S4</p></b>
                 <time>
-                    <p>Jan 19, 17-50 GMT-3</p>
+                    <p>{formDate}</p>
                 </time>
             </div>
             <div className="summary-main">

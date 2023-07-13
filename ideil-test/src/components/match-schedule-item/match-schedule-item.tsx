@@ -2,6 +2,7 @@ import "./index.css"
 import React from "react";
 import MaltaTour from "../../assets/test.svg";
 import {teams} from "../../modules/types.ts";
+import formatDate from "../../services/date-service.ts";
 
 interface MatchScheduleItem {
     match: {
@@ -21,6 +22,8 @@ interface MatchScheduleItem {
 const MatchScheduleItem: React.FC<MatchScheduleItem> = ({match}) => {
 
 
+    const formDate = formatDate(match.attributes.matchDate).split(",")[1].split(" ")
+    console.log(formDate)
     return (
                 <tr>
                     <td style={{width: "20%"}}><p>{match.attributes.stageOfMatch}
@@ -37,8 +40,8 @@ const MatchScheduleItem: React.FC<MatchScheduleItem> = ({match}) => {
                                     </div>
                                 </div>
                                 <div className="match-schedule-item-main__time">
-                                    <p className="match-schedule-item-main__time-zone">GTM-3</p>
-                                    <time className="match-schedule-item-main__start">19-00</time>
+                                    <p className="match-schedule-item-main__time-zone">{formDate[2]}</p>
+                                    <time className="match-schedule-item-main__start">{formDate[1]}</time>
                                 </div>
                                 <div className="match-schedule-item-main__second-team">
                                     <div className="match-schedule-item__logo">

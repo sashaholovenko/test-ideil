@@ -3,76 +3,69 @@ import "./index.css"
 import {FC, useEffect, useState} from "react";
 import {GamesItemProps} from "../../modules/types.ts";
 import {useNavigate} from "react-router-dom";
+import formatDate from "../../services/date-service.ts";
 
-const GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
+const   GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
 
-    const [_onlineMatch, setOnline] = useState<boolean>()
-    const [matchTime, setMatchTime] = useState<number[]>([])
-    const [userTime, setUserTime] = useState<number[]>([])
+    const [onlineMatch, _setOnline] = useState<boolean>()
+    // const [matchTime, setMatchTime] = useState<number[]>([])
+    // const [userTime, setUserTime] = useState<number[]>([])
 
-    const months = ['янв' , 'фев' , 'мар' , 'апр' , 'май' , 'июн' , 'июл' , 'авг' , 'сен' , 'окт' , 'ноя' , 'дек']
     const navigate = useNavigate()
 
+    // TODO: rework logic of checking online match
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     @ts-ignore
+    //     const getTimeOfMatch = (value?: string) => {
+    //         let date;
+    //         if (value && typeof value === 'string') {
+    //             date = new Date(value);
+    //         } else {
+    //             date = new Date()
+    //         }
+    //         const [month, day, year, hour, minutes, seconds] = [
+    //             date.getMonth(),
+    //             date.getDate(),
+    //             date.getFullYear(),
+    //             date.getHours(),
+    //             date.getMinutes(),
+    //             date.getSeconds()
+    //         ];
+    //         return [year, month, day, hour, minutes, seconds]
+    //     }
+    //
+    //     const checkOnline = (userDate: number[], gameDate: number[]) => {
+    //         for (let i = 0; i <= 2; i++) {
+    //             if (userDate[i] === gameDate[i]) {
+    //                 continue
+    //             } else {
+    //                 return false
+    //             }
+    //         }
+    //         if ( userDate[3] >= gameDate[3]  && userDate[3] <= gameDate[3] ) {
+    //             return true
+    //         } else {
+    //             return false
+    //         }
+    //     }
+    //     setUserTime(getTimeOfMatch())
+    //
+    //     setMatchTime(getTimeOfMatch(elem.attributes.matchDate))
+    //     setOnline(checkOnline(userTime, matchTime))
+    //
+    // }, [])
 
-
-        // @ts-ignore
-        const getTimeOfMatch = (value?: string) => {
-            let date;
-            if (value && typeof value === 'string') {
-                date = new Date(value);
-            } else {
-                date = new Date()
-            }
-            const [month, day, year, hour, minutes, seconds] = [
-                date.getMonth(),
-                date.getDate(),
-                date.getFullYear(),
-                date.getHours(),
-                date.getMinutes(),
-                date.getSeconds()
-            ];
-            return [year, month, day, hour, minutes, seconds]
-        }
-
-        const checkOnline = (userDate: number[], gameDate: number[]) => {
-            for (let i = 0; i <= 2; i++) {
-                if (userDate[i] === gameDate[i]) {
-                    continue
-                } else {
-                    return false
-                }
-            }
-            if ( userDate[3] >= gameDate[3]  && userDate[3] <= gameDate[3] ) {
-                return true
-            } else {
-                return false
-            }
-        }
-        setUserTime(getTimeOfMatch())
-
-        setMatchTime(getTimeOfMatch(elem.attributes.matchDate))
-        setOnline(checkOnline(userTime, matchTime))
-
-    }, [])
-
-
+    const formDate = formatDate(elem.attributes.matchDate).split(",")
 
     return (
         <div className="games-normal-item" onClick={() => navigate(`/${elem.id}`)}>
             <div className="games-normal-item__format"><p>bo1</p></div>
             <div className="games-normal-item__status">
-                <div className={_onlineMatch ? "games-normal-item__status-logo" : "games-normal-item__status-logo red"}>+</div>
-                <p>{_onlineMatch ? "онлайн" : "soon"}</p>
+                <div className={onlineMatch ? "games-normal-item__status-logo" : "games-normal-item__status-logo red"}>+</div>
+                <p>{onlineMatch ? "онлайн" : "soon"}</p>
             </div>
-            { _onlineMatch ? <div className="games-normal-item__score"><p>{elem.attributes.score? "0 - 0" : "0 - 0"}</p></div>
-                :
-                <div className="games-normal-item__date">
-                    <p>{matchTime[3]}-{matchTime[4]} GMT - 3</p>
-                    <h3>{matchTime[2]} {months[matchTime[2]]}</h3>
-                </div>
-            }
+
             <div className="games-normal-item__teams">
                 <div className="games-normal-item__teams-info">
                     <div style={{
@@ -89,8 +82,15 @@ const GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
                     }}>
                         <img src={"/src/assets/" + elem.attributes.teams.data["0"].attributes.shortName + ".svg"} alt=""/>
                     </div>
-                    <p>{elem.attributes.teams.data["0"].attributes.name}</p>
+                    <p>{elem.attributes.teams.data["0"].attributes.shortName}</p>
                 </div>
+                { onlineMatch ? <div className="games-normal-item__score"><p>{elem.attributes.score? "0 - 0" : "0 - 0"}</p></div>
+                    :
+                    <div className="games-normal-item__date">
+                        <p>{formDate[1]}</p>
+                        <h3>{formDate[0]}</h3>
+                    </div>
+                }
                 <div className="games-normal-item__teams-info">
                     <div style={{
                         width: "60px",
@@ -107,10 +107,10 @@ const GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
                     }}>
                         <img src={"/src/assets/" + elem.attributes.teams.data["1"].attributes.shortName + ".svg"} alt="" style={{width: 57, height: 40}}/>
                     </div>
-                    <p>{elem.attributes.teams.data["1"].attributes.name}</p>
+                    <p>{elem.attributes.teams.data["1"].attributes.shortName}</p>
                 </div>
             </div>
-            { _onlineMatch ?   <div className="games-normal-item__status-text"><p className="red-text">LIVE</p></div>
+            { onlineMatch ?   <div className="games-normal-item__status-text"><p className="red-text">LIVE</p></div>
             :
             null
             }

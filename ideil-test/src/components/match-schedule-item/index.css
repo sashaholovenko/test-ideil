@@ -122,6 +122,15 @@
     gap: 20px;;
 }
 
+.match-schedule-wrapper {
+    width: 100%;
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
 .match-schedule-item {
     width: 100%;
     border-collapse: collapse;

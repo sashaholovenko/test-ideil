@@ -8,6 +8,7 @@ import SubscribeSection from "../../modules/subscribe-section/subscribe-section.
 import GamesPredictions from "../../modules/games-predictions/games-predictions.tsx";
 import {Match} from "../../modules/types.ts";
 import {Helmet} from "react-helmet";
+import formatDate from "../../services/date-service.ts";
 // import {teams} from "../../modules/types.ts";
 
 // interface gameProps {
@@ -26,6 +27,8 @@ import {Helmet} from "react-helmet";
 
 const GamePage = () => {
     const filters = ["Общая информация", "Стрим", "Команды и составы", "Результаты матча", "Предстоящие матчи", "Частые вопросы"]
+
+    // TODO: add players to other teams to make dynamic game page
 
     // @ts-ignore
     const [game, setGame] = useState<Match>({})
@@ -60,6 +63,8 @@ const GamePage = () => {
         </div>
     );
     if (error) return "Error!";
+
+
 
     return (
         <>

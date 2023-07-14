@@ -1,12 +1,15 @@
 import "./index.css"
 import React from "react";
 import MaltaTour from "../../assets/malta-tournament.png"
-import {GamesItemProps} from "../../modules/types.ts"
+import { Match} from "../../modules/types.ts"
 import {useNavigate} from "react-router-dom";
 
 
+interface GamesBigItemProps {
+    elem: Match
+}
 
-const GamesBigItem: React.FC<GamesItemProps> = ({elem}) => {
+const GamesBigItem: React.FC<GamesBigItemProps> = ({elem}) => {
 
     let navigate = useNavigate();
 

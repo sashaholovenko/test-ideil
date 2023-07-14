@@ -1,11 +1,15 @@
 import MaltaTour from "../../assets/malta-tournament.png";
 import "./index.css"
-import {FC, useEffect, useState} from "react";
-import {GamesItemProps} from "../../modules/types.ts";
+import {FC, useState} from "react";
+import { Match} from "../../modules/types.ts";
 import {useNavigate} from "react-router-dom";
 import formatDate from "../../services/date-service.ts";
 
-const   GamesNormalItem: FC<GamesItemProps> = ({elem}) => {
+interface GamesNormalItemProps {
+    elem: Match
+}
+
+const   GamesNormalItem: FC<GamesNormalItemProps> = ({elem}) => {
 
     const [onlineMatch, _setOnline] = useState<boolean>()
 

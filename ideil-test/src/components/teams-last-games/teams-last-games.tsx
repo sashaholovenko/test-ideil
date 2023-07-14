@@ -11,14 +11,14 @@ const TeamsLastGames = () => {
             <div className="last-games">
                 <div className="last-games__first">
                     <h3>Пятница 25 июля 2021</h3>
-                    { [1,2, 3].map( _elem => (
-                        <TeamLastGamesItem/>
+                    { [1,2, 3].map( elem => (
+                        <TeamLastGamesItem key={elem}/>
                     ))}
                 </div>
                 <div className="last-games__second">
                     <h3>Суббота 26 июля 2021</h3>
-                    { [1,2, 3].map( _elem => (
-                        <TeamLastGamesItem />
+                    { [4,5, 6].map( elem => (
+                        <TeamLastGamesItem key={elem}/>
                     ))}
                 </div>
 

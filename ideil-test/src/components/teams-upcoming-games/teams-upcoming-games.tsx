@@ -9,14 +9,14 @@ const TeamsUpcomingGames = () => {
             <div className="upcoming-games">
                 <div className="upcoming-games__first">
                     <h3>Пятница 25 июля 2021</h3>
-                    { [1,2, 3].map( _elem => (
-                        <TeamsUpcomingGamesItem/>
+                    { [1,2, 3].map( elem => (
+                        <TeamsUpcomingGamesItem key={elem}/>
                     ))}
                 </div>
                 <div className="upcoming-games__second">
                     <h3>Суббота 26 июля 2021</h3>
-                    { [1,2, 3].map( _elem => (
-                        <TeamsUpcomingGamesItem />
+                    { [4,5, 6].map( elem => (
+                        <TeamsUpcomingGamesItem key={elem}/>
                     ))}
                 </div>
 

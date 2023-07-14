@@ -2,6 +2,7 @@ import GamesBigItem from "../../components/games-big-item/games-big-item.tsx";
 import GamesNormalItem from "../../components/games-normal-item/games-normal-item.tsx";
 import MatchSchedule from "../match-schedule/match-schedule.tsx";
 import {useEffect, useState} from "react";
+import {Match} from "../types.ts";
 
 
 const MatchesBlock = () => {
@@ -43,14 +44,14 @@ const MatchesBlock = () => {
     return (
             <div className="games">
                 <div className="games-large">
-                    {matches ? matches.slice(0, 3).map((elem, index) => (
-                        <GamesBigItem elem={elem} key={index}/>
+                    {matches ? matches.slice(0, 3).map((elem: Match)=> (
+                        <GamesBigItem elem={elem} key={elem.id}/>
                     )) : null}
                 </div>
 
                 <div className="games-normal">
-                    {matches ? matches.slice(3).map( (elem, index) => (
-                        <GamesNormalItem key={index} elem={elem}/>
+                    {matches ? matches.slice(3).map( (elem: Match) => (
+                        <GamesNormalItem key={elem.id} elem={elem}/>
                     )) : null}
                 </div>
                 <MatchSchedule matches={matches}/>

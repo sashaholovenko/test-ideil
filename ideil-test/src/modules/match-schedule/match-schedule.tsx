@@ -12,13 +12,15 @@ const MatchSchedule: FC<MatchScheduleProps>= ({matches}) => {
 
     const [filteredMatches, setFiltered] = useState([])
 
-    // TODO: make a logic for showing matches for the next two days
+    // TODO: fix filtration by data
+    // TODO: make new strapi archive
+
     useEffect(() => {
         function groupMatchesByDay(matches: object[]) {
-            const matchesByDay = {};
+            const matchesByDay: object = {};
 
             matches.forEach((match) => {
-                const matchDate = new Date(match.attributes.matchDate).toISOString().split('T')[0];
+                const matchDate: string = new Date(match.attributes.matchDate).toISOString().split('T')[0];
 
                 if (!matchesByDay[matchDate]) {
                     matchesByDay[matchDate] = [];
@@ -30,29 +32,29 @@ const MatchSchedule: FC<MatchScheduleProps>= ({matches}) => {
             return matchesByDay;
         }
 
-        // Группируем матчи по дням
+        // Matches by days
         const matchesByDay = groupMatchesByDay(matches);
 
-        // Преобразуем объект matchesByDay в массив значений
+        // making object matchesByDay in array for better mapping
         const matchesArray = Object.values(matchesByDay);
 
         setFiltered(matchesArray)
 
-        // function showUpcoming (matches) {
-        //     const currentDate = new Date()
-        //
-        //     const upcomingMatches = matches.filter( elem => {
-        //         return new Date(elem[0].attributes.matchDate) > currentDate
-        //         // console.log(elem[0].attributes.matchDate)
-        //     })
-        //
-        //     return upcomingMatches
-        // }
-        // setFiltered(showUpcoming(matchesArray))
-        console.log(filteredMatches)
+        function showUpcoming (matches) {
+            const currentDate = new Date()
+
+            const upcomingMatches = matches.filter( elem => {
+                return new Date(elem[0].attributes.matchDate) > currentDate
+            })
+
+            return upcomingMatches
+        }
+        setFiltered(showUpcoming(matchesArray))
+
 
     }, [])
 
+    console.log(filteredMatches)
 
 
     return (

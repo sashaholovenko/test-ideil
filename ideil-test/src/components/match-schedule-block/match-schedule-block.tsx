@@ -20,7 +20,9 @@ const MatchScheduleBlock: FC<MatchScheduleBlockProps> = ({matches}) => {
             timeZone: "Europe/Kiev",
         }
 
-        return formatDate(matches[0].attributes.matchDate, "ru-Ru",options).charAt(0).toUpperCase() + formatDate(matches[0].attributes.matchDate, "ru-Ru",options).slice(1)
+        const originalDate = formatDate(matches[0].attributes.matchDate, "ru-Ru", options)
+
+        return originalDate.charAt(0).toUpperCase() + originalDate.slice(1)
     }
 
     return (

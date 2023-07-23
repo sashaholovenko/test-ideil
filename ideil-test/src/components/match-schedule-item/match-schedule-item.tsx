@@ -1,23 +1,12 @@
 import "./index.css"
 import React from "react";
 import MaltaTour from "../../assets/test.svg";
-import {teams} from "../../modules/types.ts";
+import {Match} from "../../modules/types.ts";
 import formatDate from "../../services/date-service.ts";
 import {useNavigate} from "react-router-dom";
 
 interface MatchScheduleItem {
-    match: {
-        id: number
-        attributes: {
-            matchDate: string
-            score: string | null
-            stageOfMatch: string
-            teams: teams
-            winner: string
-            formatOfMatch: string
-        }
-
-    }
+    match: Match
 }
 
 const MatchScheduleItem: React.FC<MatchScheduleItem> = ({match}) => {

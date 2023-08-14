@@ -9,6 +9,7 @@ import {Helmet} from "react-helmet";
 
 import GamePageFilters from "../../components/game-page-filters/game-page-filters.tsx";
 import {useLocation, useParams} from "react-router-dom";
+import {matchesApi} from "../../store/matchesApi.ts";
 
 
 const GamePage = () => {
@@ -20,9 +21,10 @@ const GamePage = () => {
     const [error, setError] = useState(null);
     const {id} = useParams<{id: string}>();
 
+    const { data } = matchesApi.useGetOneMatchQuery(9)
+    console.log(data)
+
     const location = useLocation();
-    const smth = useParams()
-    console.log(smth)
     useEffect(() => {
         fetch(`http://localhost:1337/api/matches/${location.state.id}?populate=teams.players`)
             .then( responce => {

@@ -8,7 +8,7 @@ import {Match} from "../../modules/types.ts";
 import {Helmet} from "react-helmet";
 
 import GamePageFilters from "../../components/game-page-filters/game-page-filters.tsx";
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 
 
 const GamePage = () => {
@@ -20,8 +20,11 @@ const GamePage = () => {
     const [error, setError] = useState(null);
     const {id} = useParams<{id: string}>();
 
+    const location = useLocation();
+    const smth = useParams()
+    console.log(smth)
     useEffect(() => {
-        fetch(`http://localhost:1337/api/matches/${id}?populate=teams.players`)
+        fetch(`http://localhost:1337/api/matches/${location.state.id}?populate=teams.players`)
             .then( responce => {
                 if (responce.ok) {
                     return responce.json() as Promise<Match>
@@ -59,6 +62,7 @@ const GamePage = () => {
             <Helmet>
                 <meta
                     name="describtion"
+
                     content={`Page of the game between ${game.attributes.teams.data[0].attributes.name} and ${game.attributes.teams.data[1].attributes.name}`}
                 />
                 <title>{`${game.attributes.teams.data[0].attributes.name} vs ${game.attributes.teams.data[1].attributes.name}. Stats, Face to Face Games, Results`}</title>

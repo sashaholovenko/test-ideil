@@ -38,6 +38,15 @@
     },
     "formatOfMatch": {
       "type": "string"
+    },
+    "matchFormat": {
+      "type": "enumeration",
+      "enum": [
+        "bo1",
+        "bo2",
+        "bo3",
+        "bo5"
+      ]
     }
   }
 }

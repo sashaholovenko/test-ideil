@@ -18,7 +18,7 @@ const PlayersStats: FC<PlayersStatsProps> = ({game, img}) => {
                     <tr>
                         {img ?
                             <th style={{width: "30%"}}><div className="roasters__team">
-                                <img src={"src/assets/" + `${team.attributes.shortName}` + ".svg"} alt="" style={{width: 50, height: 41}}/>
+                                <img src={"/src/assets/" + `${team.attributes.shortName}` + ".svg"} alt="" style={{width: 50, height: 41}}/>
                                 {team.attributes.name}
                             </div></th>
                             :

@@ -29,7 +29,7 @@ const GameSummary: FC<GameSummaryProps> = ({game}) => {
                 <div className="summary-main__team">
                     <div className="summary-main__team-photo">
                         <div className="summary-main__winner"><p>W</p></div>
-                        <img src={"src/assets/" + `${game.attributes.teams.data[0].attributes.shortName}` + ".svg"} alt="" style={{width: 133, height: 93}}/>
+                        <img src={"/src/assets/" + `${game.attributes.teams.data[0].attributes.shortName}` + ".svg"} alt="" style={{width: 133, height: 93}}/>
                     </div>
                     <div className="summary-main__team-name"><p>{game.attributes.teams.data[0].attributes.name}</p>
                     </div>
@@ -51,7 +51,7 @@ const GameSummary: FC<GameSummaryProps> = ({game}) => {
                 <div className="summary-main__team looser">
                     <div className="summary-main__team-photo">
                         <div className="summary-main__winner"><p>W</p></div>
-                        <img src={"src/assets/" + `${game.attributes.teams.data[1].attributes.shortName}` + ".svg"} alt="" style={{width: 133, height: 93}}/></div>
+                        <img src={"/src/assets/" + `${game.attributes.teams.data[1].attributes.shortName}` + ".svg"} alt="" style={{width: 133, height: 93}}/></div>
                     <div className="summary-main__team-name"><p>{game.attributes.teams.data[1].attributes.name}</p>
                     </div>
                     <div className="summary-main__last-matches">

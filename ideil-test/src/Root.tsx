@@ -5,6 +5,7 @@ import Footer from "./modules/footer/footer.tsx";
 import GamePage from "./core/game-page/game-page.tsx";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import ErrorPage from "./core/error-page/error-page.tsx";
+import * as path from "path";
 
 const router = createBrowserRouter([
     {
@@ -13,9 +14,14 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage/>
     },
     {
-        path: ":id",
+        path: "matches/:teams",
+        element: <GamePage/>
+    },
+    {
+        path: "matches/:teams/:date",
         element: <GamePage/>
     }
+
 ])
 
 function Root() {

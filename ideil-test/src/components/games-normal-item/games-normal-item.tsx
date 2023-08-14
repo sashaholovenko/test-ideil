@@ -2,14 +2,22 @@ import MaltaTour from "../../assets/malta-tournament.png";
 import "./index.css"
 import {FC, useState} from "react";
 import { Match} from "../../modules/types.ts";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import formatDate from "../../services/date-service.ts";
 
 interface GamesNormalItemProps {
     elem: Match
+    data: Match[]
+    index: number
 }
 
-const   GamesNormalItem: FC<GamesNormalItemProps> = ({elem}) => {
+enum matchStatus {
+    ONGOING,
+    FINISHED_NO_NEXT,
+    FINISHED_WITH_NEXT
+}
+
+const GamesNormalItem: FC<GamesNormalItemProps> = ({elem,data, index}) => {
 
     const [onlineMatch, _setOnline] = useState<boolean>()
 
@@ -18,11 +26,52 @@ const   GamesNormalItem: FC<GamesNormalItemProps> = ({elem}) => {
 
     // TODO: rework logic of checking online match
 
+    function formatUrl ( match: Match, data: Match[], index: number ) {
+
+        const userDate = new Date()
+        const matchDate = new Date(match.attributes.matchDate)
+        console.log(userDate)
+
+        if ( match.attributes.winner === null && userDate > matchDate ) {
+            return matchStatus.ONGOING
+        }
+
+        if ( match.attributes.winner && data.slice(index + 3).find((elem) => elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[0].attributes.name &&
+            elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[1].attributes.name || elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[1].attributes.name &&
+            elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[0].attributes.name)
+        ) {
+            console.log(index)
+            return matchStatus.FINISHED_WITH_NEXT
+        } else {
+            return matchStatus.FINISHED_NO_NEXT
+        }
+
+
+    }
+
+
 
     const formDate = formatDate(elem.attributes.matchDate).split(",")
 
     return (
-        <div className="games-normal-item" onClick={() => navigate(`/${elem.id}`)}>
+        <div className="games-normal-item" onClick={() => {
+            if (formatUrl(elem, data, index) === matchStatus.ONGOING || matchStatus.FINISHED_NO_NEXT) {
+                // navigate(`${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${new Date(elem.attributes.matchDate).getFullYear()}-${new Date(elem.attributes.matchDate).getMonth()}-${new Date(elem.attributes.matchDate).getDay()}`, {state: {id: elem.id}})
+
+                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}`, {state: {id: elem.id}})
+
+
+                // navigate(`${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/`, {state: {id: elem.id}})
+
+
+
+            } else {
+                // navigate(`${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/`, {state: {id: elem.id}})
+                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${2023}-${12}-${10}`, {state: {id: elem.id}})
+
+
+            }
+        }}>
             <div className="games-normal-item__format"><p>bo1</p></div>
             <div className="games-normal-item__status">
                 <div className={onlineMatch ? "games-normal-item__status-logo" : "games-normal-item__status-logo red"}></div>

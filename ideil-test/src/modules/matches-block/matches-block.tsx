@@ -13,7 +13,7 @@ const MatchesBlock = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:1337/api/matches?populate=*")
+        fetch("http://localhost:1337/api/matches?sort=matchDate:asc&populate=*")
             .then( responce => {
                 if (responce.ok) {
                     return responce.json()
@@ -44,14 +44,14 @@ const MatchesBlock = () => {
     return (
             <div className="games">
                 <div className="games-large">
-                    {matches ? matches.slice(0, 3).map((elem: Match)=> (
-                        <GamesBigItem elem={elem} key={elem.id}/>
+                    {matches ? matches.slice(0, 3).map((elem: Match, index)=> (
+                        <GamesBigItem elem={elem} key={elem.id} index={index} data={matches}/>
                     )) : null}
                 </div>
 
                 <div className="games-normal">
-                    {matches ? matches.slice(3).map( (elem: Match) => (
-                        <GamesNormalItem key={elem.id} elem={elem}/>
+                    {matches ? matches.slice(3).map( (elem: Match, index) => (
+                        <GamesNormalItem key={elem.id} elem={elem} data={matches} index={index}/>
                     )) : null}
                 </div>
                 <MatchSchedule matches={matches}/>

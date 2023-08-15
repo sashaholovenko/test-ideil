@@ -6,16 +6,18 @@ import firstpic from "../../assets/first-team-round.svg"
 import secondpic from "../../assets/second-team-round.svg"
 import smallNavi from "../../assets/navi-stats-logo.svg"
 import smallG2 from "../../assets/g2-stats-logo.svg"
-import {Match} from "../types.ts";
 import {FC} from "react";
 
 interface GameResultProps {
-    game: Match
 
 }
 
-const GameResults: FC<GameResultProps> = ({game}) => {
+const GameResults: FC<GameResultProps> = ( ) => {
 
+
+
+
+    // TODO: make two separate components
     const first =  <div style={{width: 30, height: 30, background: "rgba(44,116,179,1)", display: "flex", justifyContent: "center", alignItems: "center", margin: "0 auto"}}><img src={firstpic} alt=""/></div>
     const second =  <div style={{width: 30, height: 30, background: "rgba(255,125,2,1)", display: "flex", justifyContent: "center", alignItems: "center", margin: "0 auto"}}><img src={secondpic} alt=""/></div>
 
@@ -116,7 +118,7 @@ const GameResults: FC<GameResultProps> = ({game}) => {
                 </tbody>
             </table>
             <h3 style={{fontSize: 22, marginTop: 20}}>Статистика за карту</h3>
-            <PlayersStats game={game} img={false}/>
+            <PlayersStats img={false}/>
             <div className="game-results-header">
                 <div><h2>Карта Mirage</h2></div>
                 <div className="game-results-header__score ">

@@ -5,12 +5,9 @@ import MatchesBlock from "../../modules/matches-block/matches-block.tsx";
 import PageSectionHeader from "../../components/UI/page-section-header/page-section-header.tsx";
 import NewsSection from "../../modules/news-section/news-section.tsx";
 import {Helmet} from "react-helmet"
-import {matchesApi} from "../../store/matchesApi.ts";
 
 const MainPage = () => {
 
-    const { data }  = matchesApi.useGetAllMatchesQuery(null)
-    console.log(data)
 
     return (
         <>
@@ -33,4 +30,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-//@ts-ignore

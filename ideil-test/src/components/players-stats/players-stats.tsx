@@ -1,18 +1,22 @@
 import "./index.css"
 
-import {FC} from "react";
-import {Match} from "../../modules/types.ts";
+import {FC, useContext} from "react";
+import {Team} from "../../modules/types.ts";
+import {GameContext} from "../../core/game-page/game-page.tsx";
+import {matchesApi} from "../../store/matchesApi.ts";
 
 interface PlayersStatsProps {
-    game: Match
     img: boolean
 }
 
-const PlayersStats: FC<PlayersStatsProps> = ({game, img}) => {
+const PlayersStats: FC<PlayersStatsProps> = ({ img}) => {
+
+    const id = useContext(GameContext);
+    const game = matchesApi.useGetOneMatchQuery(id).data.data
 
     return (
         <div className="roasters">
-            {game.attributes.teams.data.map( (team) => (
+            {game.attributes.teams.data.map( (team: Team) => (
                 <table key={team.id}>
                     <thead>
                     <tr>

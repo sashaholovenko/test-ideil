@@ -1,18 +1,17 @@
 import "./index.css"
-import {FC} from "react";
-import {Team} from "../../modules/types.ts";
-import logo from "../../assets/EG.svg"
+import {FC, useContext} from "react";
+import {matchesApi} from "../../store/matchesApi.ts";
+import {GameContext} from "../../core/game-page/game-page.tsx";
 
 
 interface TeamItemProps {
-    teams: Team[]
 }
 
-// @ts-ignore
-const TeamItem: FC<TeamItemProps> = ({ teams}) => {
+const TeamItem: FC<TeamItemProps> = ( ) => {
 
-    console.log(teams[0].attributes.players.data[0].attributes.name)
-
+    const id = useContext(GameContext)
+    const { data } = matchesApi.useGetOneMatchQuery(id).data
+    const teams = data.attributes.teams.data
 
 
     return (

@@ -54,7 +54,6 @@ const MatchSchedule: FC<MatchScheduleProps>= ({matches}) => {
 
     }, [])
 
-    console.log(filteredMatches)
 
 
     return (

@@ -39,7 +39,6 @@ const MatchesBlock = () => {
     }
 
     const newArr = filterMatches(data, filterBy, chosenTeam, chosenTournament)
-    console.log(newArr)
 
     if ( isLoading ) return (
         <div style={{width: "100%", height: 700, display: "flex", alignItems: "center", justifyContent: "center"}}>
@@ -54,13 +53,13 @@ const MatchesBlock = () => {
     return (
             <div className="games">
                 <div className="games-large">
-                    {newArr ? newArr.slice(0, 3).map((elem: Match, index)=> (
+                    {newArr ? newArr.slice(0, 3).map((elem: Match, index: number)=> (
                         <GamesBigItem elem={elem} key={elem.id} index={index} data={data.data}/>
                     )) : null}
                 </div>
 
                 <div className="games-normal">
-                    {newArr ? newArr.slice(3).map( (elem: Match, index) => (
+                    {newArr ? newArr.slice(3).map( (elem: Match, index: number) => (
                         <GamesNormalItem key={elem.id} elem={elem} data={data.data} index={index}/>
                     )) : null}
                 </div>

@@ -16,7 +16,6 @@ const GamePage = () => {
 
     const location = useLocation();
     const [contextId, _setContextId] = useState(location.state.id)
-
     // @ts-ignore
     const {data, isLoading, isError} = matchesApi.useGetOneMatchQuery(location.state.id)
 

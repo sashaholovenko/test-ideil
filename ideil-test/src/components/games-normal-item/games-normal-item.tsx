@@ -25,7 +25,7 @@ const GamesNormalItem: FC<GamesNormalItemProps> = ({elem,data, index}) => {
 
     return (
         <div className="games-normal-item" onClick={() => {
-            if (formatUrl(elem, data, index) === matchStatus.ONGOING || matchStatus.FINISHED_NO_NEXT) {
+            if (formatUrl(elem, data, index + 3) === matchStatus.ONGOING || matchStatus.FINISHED_NO_NEXT) {
                 navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}`, {state: {id: elem.id, index: true}})
             } else {
                 navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${2023}-${12}-${10}`, {state: {id: elem.id, index: false}})

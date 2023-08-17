@@ -15,7 +15,6 @@ interface GamesBigItemProps {
 const GamesBigItem: React.FC<GamesBigItemProps> = ({elem, data, index}) => {
 
     const navigate = useNavigate()
-
     // TODO: rework logic of checking online match
 
     return (

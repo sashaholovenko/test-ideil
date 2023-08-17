@@ -15,11 +15,10 @@ export function formatUrl ( match: Match, data: Match[], index: number ) {
         return matchStatus.ONGOING
     }
 
-    if ( data.find((elem) => elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[0].attributes.name &&
+    if ( data.slice(index).find((elem) => elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[0].attributes.name &&
         elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[1].attributes.name || elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[1].attributes.name &&
         elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[0].attributes.name)
     ) {
-
         return matchStatus.FINISHED_WITH_NEXT
     } else {
         return matchStatus.FINISHED_NO_NEXT

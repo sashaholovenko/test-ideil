@@ -20,7 +20,7 @@ const GamesBigItem: React.FC<GamesBigItemProps> = ({elem, data, index}) => {
     return (
 
         <div className="games-large-item" onClick={() => {
-            if (formatUrl(elem, data, index) === matchStatus.FINISHED_NO_NEXT) {
+            if (formatUrl(elem, data, index) === matchStatus.FINISHED_NO_NEXT || matchStatus.ONGOING) {
                 navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}`, {state: {id: elem.id, index: true}})
             } else {
                 navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${2023}-${12}-${10}`, {state: {id: elem.id, index: false}})

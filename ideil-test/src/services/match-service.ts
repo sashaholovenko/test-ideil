@@ -15,7 +15,7 @@ export function formatUrl ( match: Match, data: Match[], index: number ) {
         return matchStatus.ONGOING
     }
 
-    if ( data.slice(index).find((elem) => elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[0].attributes.name &&
+    if ( data.slice(index + 1).find((elem) => elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[0].attributes.name &&
         elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[1].attributes.name || elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[1].attributes.name &&
         elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[0].attributes.name)
     ) {

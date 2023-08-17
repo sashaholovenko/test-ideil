@@ -116,6 +116,26 @@
     margin-top: 40px;
 }
 
+.teams-filter-select {
+    height: 40px;
+    background-color: #f5f5f5;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    border-width: 0;
+}
+
+.tournaments-filters-select {
+    height: 40px;
+    background-color: #f5f5f5;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    border-width: 0;
+}
+
 .tournaments-filters {
     width: 90%;
     display: flex;

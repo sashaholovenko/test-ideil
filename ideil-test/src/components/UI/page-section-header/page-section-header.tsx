@@ -1,6 +1,4 @@
 import {FC} from "react";
-import twitterLogo from "../../../assets/twitter-logo-small.svg";
-import facebookLogo from "../../../assets/facebook-logo-small.svg";
 
 interface PageSectionHeader {
     value: string

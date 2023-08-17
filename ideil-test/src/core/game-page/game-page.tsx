@@ -36,11 +36,16 @@ const GamePage = () => {
     return (
         <>
             <Helmet>
-                <meta
-                    name="describtion"
+                { location.state.index ?
+                    <meta
+                        name="describtion"
 
-                    content={`Page of the game between ${data.data.attributes.teams.data[0].attributes.name} and ${data.data.attributes.teams.data[1].attributes.name}`}
-                />
+                        content={`Page of the game between ${data.data.attributes.teams.data[0].attributes.name} and ${data.data.attributes.teams.data[1].attributes.name}`}
+                    /> :
+                    <meta name="robots" content="noindex"/>
+
+                }
+
                 <title>{`${data.data.attributes.teams.data[0].attributes.name} vs ${data.data.attributes.teams.data[1].attributes.name}. Stats, Face to Face Games, Results`}</title>
             </Helmet>
             <GameContext.Provider value={contextId}>

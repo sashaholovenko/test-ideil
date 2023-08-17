@@ -4,11 +4,22 @@ import apexSVG from "../../assets/apex-logo.svg";
 import rainbowSVG from "../../assets/rainbow6-logo.svg";
 import valorantSVG from "../../assets/valorant-logo.svg";
 import dotaSVG from "../../assets/dota2-logo.svg";
-import filterDrop from "../../assets/filter-drop.svg";
-import filterUp from "../../assets/filter-up.svg";
 import "../../core/main-page/index.css"
+import  {Dispatch, FC, SetStateAction } from "react";
+import {useAppDispatch} from "../../store/hooks.ts";
+import {filtersSlice} from "../../store/reducers/filter-slice.ts";
 
-const MainFilters = () => {
+interface MainFiltersProps {
+    filterBy: string,
+    setFilterBy: Dispatch<SetStateAction<string>>
+}
+
+
+const MainFilters: FC<MainFiltersProps> = () => {
+
+    const { setFilterBy, setChosenTeam, setChosenTournament} = filtersSlice.actions
+    const dispatch = useAppDispatch()
+
     return (
         <div className="main-filters">
             <div className="game-filters">
@@ -41,23 +52,40 @@ const MainFilters = () => {
                 <div className="time-status-filters">
                     <span>Текущие</span><span>Завершенные</span><span className="timezone">Предстоящие</span>
                 </div>
+
                 <div className="matches-filters">
-                    <div style={{width: "50%", display: "flex", gap: 8}}>
-                        <p>Команды</p>
-                        <img src={filterDrop} alt=""/>
+                    <div>
+                        <select name="teams-filter" id=""
+                                className="teams-filter-select"
+                                defaultValue="Команды" onChange={(e) => {
+                            dispatch(setFilterBy("Teams"))
+                            dispatch(setChosenTeam(e.currentTarget.value))
+                        }}>
+                            <option value="all">Команды</option>
+                            <option value="Natus Vincere">Natus Vincere</option>
+                            <option value="Liquid">Liquid</option>
+                            <option value="mouz">mouz</option>
+                            <option value="Virtus Pro">Virtus Pro</option>
+                            <option value="BIG">BIG</option>
+                            <option value="Gambit">Gambit</option>
+                            <option value="G2 Esports">G2 Esports</option>
+                            <option value="Evil Geniuses">Evil Geniuses</option>
+                        </select>
                     </div>
 
-                    <div className="matches-filters-item choosen">
-                        <p>Турниры</p>
-                        <img src={filterUp} alt="" style={{maxWidth: 16}}/>
-                    </div>
-                    <div style={{width: "50%", display: "flex", gap: 8}}>
-                        <p>Дата</p>
-                        <img src={filterDrop} alt=""/>
-                    </div>
-                    <div style={{width: "50%", display: "flex", gap: 8}}>
-                        <p>Тир</p>
-                        <img src={filterDrop} alt=""/>
+                    <div>
+                        <select name="tournaments-filter" id="" defaultValue="Турниры" className="tournaments-filters-select"
+                                onChange={(e) => {
+                                    dispatch(setFilterBy("Tournaments"))
+                                    dispatch(setChosenTournament(e.currentTarget.value))
+                                }}
+                        >
+                            <option value="all">Tournaments</option>
+                            <option value="Major Rio 2022">Major Rio 2022</option>
+                            <option value="International 2023">International 2023</option>
+                            <option value="Malta 2022">Malta 2022</option>
+                            <option value="IEM Katowice">IEM Katowice</option>
+                        </select>
                     </div>
                 </div>
             </div>

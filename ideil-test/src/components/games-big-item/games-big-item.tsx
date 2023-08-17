@@ -3,6 +3,7 @@ import React from "react";
 import MaltaTour from "../../assets/malta-tournament.png"
 import { Match} from "../../modules/types.ts"
 import {useNavigate} from "react-router-dom";
+import {formatUrl, matchStatus} from "../../services/match-service.ts";
 
 
 interface GamesBigItemProps {
@@ -11,48 +12,19 @@ interface GamesBigItemProps {
     data: Match[]
 }
 
-enum matchStatus {
-    ONGOING,
-    FINISHED_NO_NEXT,
-    FINISHED_WITH_NEXT
-}
-
 const GamesBigItem: React.FC<GamesBigItemProps> = ({elem, data, index}) => {
-
 
     const navigate = useNavigate()
 
     // TODO: rework logic of checking online match
 
-    function formatUrl ( match: Match, data: Match[], index: number ) {
-
-        const userDate = new Date()
-        const matchDate = new Date(match.attributes.matchDate)
-
-        if ( match.attributes.winner === null && userDate > matchDate ) {
-            return matchStatus.ONGOING
-        }
-
-        if ( data.find((elem) => elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[0].attributes.name &&
-            elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[1].attributes.name || elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[1].attributes.name &&
-            elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[0].attributes.name)
-        ) {
-
-            return matchStatus.FINISHED_WITH_NEXT
-        } else {
-            return matchStatus.FINISHED_NO_NEXT
-        }
-
-
-    }
-
     return (
 
         <div className="games-large-item" onClick={() => {
             if (formatUrl(elem, data, index) === matchStatus.FINISHED_NO_NEXT) {
-                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}`, {state: {id: elem.id}})
+                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}`, {state: {id: elem.id, index: true}})
             } else {
-                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${2023}-${12}-${10}`, {state: {id: elem.id}})
+                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${2023}-${12}-${10}`, {state: {id: elem.id, index: false}})
             }
         }}>
             <div className="games-large-item__format"><p>bo5</p></div>
@@ -79,7 +51,7 @@ const GamesBigItem: React.FC<GamesBigItemProps> = ({elem, data, index}) => {
             <div className="games-large-item__status-text"><p className="red-text">LIVE</p></div>
             <div className="games-large-item__tournament-info">
                 <img src={MaltaTour} alt=""/>
-                <p>International 2023</p>
+                <p>{elem.attributes.tournament}</p>
             </div>
         </div>
     );

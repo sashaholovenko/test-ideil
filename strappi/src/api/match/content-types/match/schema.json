@@ -47,6 +47,9 @@
         "bo3",
         "bo5"
       ]
+    },
+    "tournament": {
+      "type": "string"
     }
   }
 }

@@ -40,6 +40,7 @@ export interface Match {
         score: string;
         stageOfMatch: string;
         formatOfMatch: string;
+        tournament: string;
         teams: {
             data: Team[];
         };

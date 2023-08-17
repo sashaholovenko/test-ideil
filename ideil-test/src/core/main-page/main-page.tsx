@@ -5,9 +5,11 @@ import MatchesBlock from "../../modules/matches-block/matches-block.tsx";
 import PageSectionHeader from "../../components/UI/page-section-header/page-section-header.tsx";
 import NewsSection from "../../modules/news-section/news-section.tsx";
 import {Helmet} from "react-helmet"
+import {useState} from "react";
 
 const MainPage = () => {
 
+    const [ filterBy, setFilterBy ] = useState('all')
 
     return (
         <>
@@ -20,7 +22,7 @@ const MainPage = () => {
             </Helmet>
             <main>
                 <PageSectionHeader value="Матчи CS:GO" fontSize={40}/>
-                <MainFilters />
+                <MainFilters filterBy={filterBy} setFilterBy={setFilterBy}/>
                 <TournamentsFilters />
                 <MatchesBlock />
             </main>

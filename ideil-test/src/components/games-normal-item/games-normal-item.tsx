@@ -4,6 +4,7 @@ import {FC, useState} from "react";
 import { Match} from "../../modules/types.ts";
 import {useNavigate} from "react-router-dom";
 import formatDate from "../../services/date-service.ts";
+import {formatUrl, matchStatus} from "../../services/match-service.ts";
 
 interface GamesNormalItemProps {
     elem: Match
@@ -11,11 +12,7 @@ interface GamesNormalItemProps {
     index: number
 }
 
-enum matchStatus {
-    ONGOING,
-    FINISHED_NO_NEXT,
-    FINISHED_WITH_NEXT
-}
+
 
 const GamesNormalItem: FC<GamesNormalItemProps> = ({elem,data, index}) => {
 
@@ -23,32 +20,15 @@ const GamesNormalItem: FC<GamesNormalItemProps> = ({elem,data, index}) => {
     const navigate = useNavigate()
     // TODO: rework logic of checking online match
 
-    function formatUrl ( match: Match, data: Match[], index: number ) {
 
-        const userDate = new Date()
-        const matchDate = new Date(match.attributes.matchDate)
-
-        if ( match.attributes.winner === null && userDate > matchDate ) {
-            return matchStatus.ONGOING
-        }
-
-        if ( match.attributes.winner && data.slice(index + 3).find((elem) => elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[0].attributes.name &&
-            elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[1].attributes.name || elem.attributes.teams.data[0].attributes.name === match.attributes.teams.data[1].attributes.name &&
-            elem.attributes.teams.data[1].attributes.name === match.attributes.teams.data[0].attributes.name)
-        ) {
-            return matchStatus.FINISHED_WITH_NEXT
-        } else {
-            return matchStatus.FINISHED_NO_NEXT
-        }
-    }
     const formDate = formatDate(elem.attributes.matchDate).split(",")
 
     return (
         <div className="games-normal-item" onClick={() => {
             if (formatUrl(elem, data, index) === matchStatus.ONGOING || matchStatus.FINISHED_NO_NEXT) {
-                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}`, {state: {id: elem.id}})
+                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}`, {state: {id: elem.id, index: true}})
             } else {
-                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${2023}-${12}-${10}`, {state: {id: elem.id}})
+                navigate(`matches/${elem.attributes.teams.data[0].attributes.shortName}-vs-${elem.attributes.teams.data[1].attributes.shortName}/${2023}-${12}-${10}`, {state: {id: elem.id, index: false}})
             }
         }}>
             <div className="games-normal-item__format"><p>bo1</p></div>
@@ -84,7 +64,7 @@ const GamesNormalItem: FC<GamesNormalItemProps> = ({elem,data, index}) => {
             }
             <div className="games-normal-item__tournament-info">
                 <img src={MaltaTour} alt=""/>
-                <p>International 2023</p>
+                <p>{elem.attributes.tournament}</p>
             </div>
         </div>
     );

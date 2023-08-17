@@ -38,7 +38,6 @@ const Header = () => {
                     <h3>RU</h3>
                 </div>
             </header>
-            <div style={{width: '100%', height: '100%', opacity: 0.10, border: '0.50px black solid'}}></div>
             <div className="header__url"><p>Home</p> <img src={headerVectorSVG} alt="" className="header__vector" style={{marginLeft: 5, marginRight: 5}}/> Киберспортивные матчи <img src={headerVectorSVG} alt="" style={{marginLeft: 5, marginRight: 5}}/> Матчи CS:GO</div>
         </>
     );

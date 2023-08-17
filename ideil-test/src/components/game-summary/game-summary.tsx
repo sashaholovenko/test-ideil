@@ -64,7 +64,7 @@ const GameSummary: FC<GameSummaryProps> = ({}) => {
                 </div>
             </div>
             <div className="game-summary__tournament">
-                <div className="game-summary__tournament-item"><h2>IEM XVI Кельн</h2><p>Турнир</p></div>
+                <div className="game-summary__tournament-item"><h2>{data.attributes.tournament}</h2><p>Турнир</p></div>
                 <div className="game-summary__tournament-item middle"><h2>1 000 000</h2><p>Призовой фонд</p></div>
                 <div className="game-summary__tournament-item"><h2>8</h2><p>Команд соревновалось</p></div>
             </div>
